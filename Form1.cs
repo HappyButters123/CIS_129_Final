@@ -22,7 +22,7 @@ namespace CIS_129_Final
         private void button1_Click(object sender, EventArgs e)
         {
             //changes text on button
-            if(Answer  == radioButton3.Text) {
+            if(Answer  == radioButton2.Text) {
                 button1.Text = "Right";
             }
             else {

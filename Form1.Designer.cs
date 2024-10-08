@@ -66,7 +66,7 @@
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(286, 43);
             this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "What color is the sky?";
+            this.richTextBox1.Text = "What color is the sun?";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // radioButton2
