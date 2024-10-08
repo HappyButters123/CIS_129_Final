@@ -64,9 +64,9 @@
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(12, 12);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(286, 43);
+            this.richTextBox1.Size = new System.Drawing.Size(313, 43);
             this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "What color is the sun?";
+            this.richTextBox1.Text = "What color is the mars?";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // radioButton2
@@ -77,7 +77,7 @@
             this.radioButton2.Size = new System.Drawing.Size(200, 50);
             this.radioButton2.TabIndex = 3;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Yellow";
+            this.radioButton2.Text = "Orange";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
