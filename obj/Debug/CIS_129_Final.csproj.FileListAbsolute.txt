@@ -1,0 +1,10 @@
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\CIS_129_Final.exe.config
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\CIS_129_Final.exe
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\CIS_129_Final.pdb
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.csproj.AssemblyReference.cache
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.Form1.resources
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.Properties.Resources.resources
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.csproj.GenerateResource.cache
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.csproj.CoreCompileInputs.cache
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.exe
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.pdb

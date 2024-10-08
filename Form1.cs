@@ -16,5 +16,16 @@ namespace CIS_129_Final
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //changes text on button
+            if(button1.Text == "Ok") {
+                button1.Text = "Button";
+            }
+            else {
+                button1.Text = "Ok";
+            }
+        }
     }
 }
