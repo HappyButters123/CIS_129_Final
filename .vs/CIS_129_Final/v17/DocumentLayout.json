@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 3286,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -37,13 +37,17 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs [Design]",
-              "RelativeToolTip": "Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs [Design]*",
+              "RelativeToolTip": "Form1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T14:47:21.145Z",
               "EditorCaption": " [Design]"
@@ -54,9 +58,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBIAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T15:18:19.125Z",
               "EditorCaption": ""
@@ -67,9 +71,9 @@
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.Designer.cs",
-              "RelativeToolTip": "Form1.Designer.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\dexma\\source\\repos\\CIS_129_Final\\Form1.Designer.cs*",
+              "RelativeToolTip": "Form1.Designer.cs*",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAhwK4BAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-08T14:58:36.879Z",
               "EditorCaption": ""
