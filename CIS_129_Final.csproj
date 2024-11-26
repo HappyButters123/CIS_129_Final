@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props" Condition="Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +54,15 @@
     <StartupObject>CIS_129_Final.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MaterialSkin.2.2.3.1\lib\net48\MaterialSkin.dll</HintPath>
     </Reference>
@@ -71,8 +81,8 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    <Reference Include="Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.160.1000.6\lib\net462\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
@@ -105,6 +115,14 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,10 +131,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FullReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -126,6 +144,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -153,19 +182,23 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="AppartmentDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="AppartmentDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>AppartmentDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <Content Include="dbo\Table\dbo.Table.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.SqlServer.Types.160.1000.6\build\net462\Microsoft.SqlServer.Types.props'))" />
+  </Target>
 </Project>

@@ -31,56 +31,61 @@ namespace CIS_129_Final
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MainWindowMaterialTabControler = new MaterialSkin.Controls.MaterialTabControl();
             this.HomePageTab = new System.Windows.Forms.TabPage();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
+            this.HomePagePanel = new System.Windows.Forms.Panel();
+            this.HomePageTitlePanel = new System.Windows.Forms.Panel();
+            this.HomePageTitleLabel = new System.Windows.Forms.Label();
+            this.HomePageButtonPanel = new System.Windows.Forms.Panel();
             this.HomePageButtonReport = new System.Windows.Forms.Button();
             this.HomePageButtonHouses = new System.Windows.Forms.Button();
             this.HomePageButtonAppartments = new System.Windows.Forms.Button();
             this.HomePageButtonHome = new System.Windows.Forms.Button();
             this.AppartmentsPageTab = new System.Windows.Forms.TabPage();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
+            this.AppartmentsPagePanel = new System.Windows.Forms.Panel();
+            this.AppartmentsPageTitlePanel = new System.Windows.Forms.Panel();
+            this.AppartmentsPageTitleLabel = new System.Windows.Forms.Label();
+            this.AppartmentsPageButtonPanel = new System.Windows.Forms.Panel();
             this.AppartmentsPageButtonReport = new System.Windows.Forms.Button();
             this.AppartmentsPageButtonHouses = new System.Windows.Forms.Button();
             this.AppartmentsPageButtonAppartments = new System.Windows.Forms.Button();
             this.AppartmentsPageButtonHome = new System.Windows.Forms.Button();
             this.HousesPageTab = new System.Windows.Forms.TabPage();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.HousesPagePanel = new System.Windows.Forms.Panel();
+            this.HousesPageTitlePanel = new System.Windows.Forms.Panel();
+            this.HousesPageTitleLabel = new System.Windows.Forms.Label();
+            this.HousesPageButtonPanel = new System.Windows.Forms.Panel();
             this.HousesPageButtonReport = new System.Windows.Forms.Button();
             this.HousesPageButtonHouses = new System.Windows.Forms.Button();
             this.HousesPageButtonAppartments = new System.Windows.Forms.Button();
             this.HousesPageButtonHome = new System.Windows.Forms.Button();
             this.ReportPageTab = new System.Windows.Forms.TabPage();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
+            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReportPageTitlePanel = new System.Windows.Forms.Panel();
+            this.ReportPageTitleLabel = new System.Windows.Forms.Label();
+            this.ReportPageButtonPanel = new System.Windows.Forms.Panel();
             this.ReportPageButtonReport = new System.Windows.Forms.Button();
             this.ReportPageButtonHouses = new System.Windows.Forms.Button();
             this.ReportPageButtonAppartments = new System.Windows.Forms.Button();
             this.ReportPageButtonHome = new System.Windows.Forms.Button();
-            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.appartmentDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new CIS_129_Final.DataSet1();
             this.MainWindowMaterialTabControler.SuspendLayout();
             this.HomePageTab.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.HomePageTitlePanel.SuspendLayout();
+            this.HomePageButtonPanel.SuspendLayout();
             this.AppartmentsPageTab.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel18.SuspendLayout();
+            this.AppartmentsPageTitlePanel.SuspendLayout();
+            this.AppartmentsPageButtonPanel.SuspendLayout();
             this.HousesPageTab.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
+            this.HousesPageTitlePanel.SuspendLayout();
+            this.HousesPageButtonPanel.SuspendLayout();
             this.ReportPageTab.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
+            this.ReportPageTitlePanel.SuspendLayout();
+            this.ReportPageButtonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // MainWindowMaterialTabControler
@@ -100,9 +105,9 @@ namespace CIS_129_Final
             // 
             // HomePageTab
             // 
-            this.HomePageTab.Controls.Add(this.panel13);
-            this.HomePageTab.Controls.Add(this.panel14);
-            this.HomePageTab.Controls.Add(this.panel15);
+            this.HomePageTab.Controls.Add(this.HomePagePanel);
+            this.HomePageTab.Controls.Add(this.HomePageTitlePanel);
+            this.HomePageTab.Controls.Add(this.HomePageButtonPanel);
             this.HomePageTab.Location = new System.Drawing.Point(4, 22);
             this.HomePageTab.Name = "HomePageTab";
             this.HomePageTab.Padding = new System.Windows.Forms.Padding(3);
@@ -111,43 +116,43 @@ namespace CIS_129_Final
             this.HomePageTab.Text = "StartMenue";
             this.HomePageTab.UseVisualStyleBackColor = true;
             // 
-            // panel13
+            // HomePagePanel
             // 
-            this.panel13.Location = new System.Drawing.Point(109, 106);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(653, 294);
-            this.panel13.TabIndex = 2;
+            this.HomePagePanel.Location = new System.Drawing.Point(109, 104);
+            this.HomePagePanel.Name = "HomePagePanel";
+            this.HomePagePanel.Size = new System.Drawing.Size(653, 294);
+            this.HomePagePanel.TabIndex = 3;
             // 
-            // panel14
+            // HomePageTitlePanel
             // 
-            this.panel14.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel14.Controls.Add(this.label5);
-            this.panel14.Location = new System.Drawing.Point(103, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(665, 100);
-            this.panel14.TabIndex = 1;
+            this.HomePageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HomePageTitlePanel.Controls.Add(this.HomePageTitleLabel);
+            this.HomePageTitlePanel.Location = new System.Drawing.Point(103, 0);
+            this.HomePageTitlePanel.Name = "HomePageTitlePanel";
+            this.HomePageTitlePanel.Size = new System.Drawing.Size(665, 100);
+            this.HomePageTitlePanel.TabIndex = 1;
             // 
-            // label5
+            // HomePageTitleLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(458, 91);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Home Page";
+            this.HomePageTitleLabel.AutoSize = true;
+            this.HomePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePageTitleLabel.Location = new System.Drawing.Point(6, 0);
+            this.HomePageTitleLabel.Name = "HomePageTitleLabel";
+            this.HomePageTitleLabel.Size = new System.Drawing.Size(458, 91);
+            this.HomePageTitleLabel.TabIndex = 0;
+            this.HomePageTitleLabel.Text = "Home Page";
             // 
-            // panel15
+            // HomePageButtonPanel
             // 
-            this.panel15.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel15.Controls.Add(this.HomePageButtonReport);
-            this.panel15.Controls.Add(this.HomePageButtonHouses);
-            this.panel15.Controls.Add(this.HomePageButtonAppartments);
-            this.panel15.Controls.Add(this.HomePageButtonHome);
-            this.panel15.Location = new System.Drawing.Point(3, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(100, 400);
-            this.panel15.TabIndex = 0;
+            this.HomePageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HomePageButtonPanel.Controls.Add(this.HomePageButtonReport);
+            this.HomePageButtonPanel.Controls.Add(this.HomePageButtonHouses);
+            this.HomePageButtonPanel.Controls.Add(this.HomePageButtonAppartments);
+            this.HomePageButtonPanel.Controls.Add(this.HomePageButtonHome);
+            this.HomePageButtonPanel.Location = new System.Drawing.Point(3, 0);
+            this.HomePageButtonPanel.Name = "HomePageButtonPanel";
+            this.HomePageButtonPanel.Size = new System.Drawing.Size(100, 400);
+            this.HomePageButtonPanel.TabIndex = 0;
             // 
             // HomePageButtonReport
             // 
@@ -191,9 +196,9 @@ namespace CIS_129_Final
             // 
             // AppartmentsPageTab
             // 
-            this.AppartmentsPageTab.Controls.Add(this.panel16);
-            this.AppartmentsPageTab.Controls.Add(this.panel17);
-            this.AppartmentsPageTab.Controls.Add(this.panel18);
+            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPagePanel);
+            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPageTitlePanel);
+            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPageButtonPanel);
             this.AppartmentsPageTab.Location = new System.Drawing.Point(4, 22);
             this.AppartmentsPageTab.Name = "AppartmentsPageTab";
             this.AppartmentsPageTab.Padding = new System.Windows.Forms.Padding(3);
@@ -202,43 +207,43 @@ namespace CIS_129_Final
             this.AppartmentsPageTab.Text = "Appartments";
             this.AppartmentsPageTab.UseVisualStyleBackColor = true;
             // 
-            // panel16
+            // AppartmentsPagePanel
             // 
-            this.panel16.Location = new System.Drawing.Point(109, 106);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(653, 294);
-            this.panel16.TabIndex = 2;
+            this.AppartmentsPagePanel.Location = new System.Drawing.Point(109, 106);
+            this.AppartmentsPagePanel.Name = "AppartmentsPagePanel";
+            this.AppartmentsPagePanel.Size = new System.Drawing.Size(653, 294);
+            this.AppartmentsPagePanel.TabIndex = 2;
             // 
-            // panel17
+            // AppartmentsPageTitlePanel
             // 
-            this.panel17.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel17.Controls.Add(this.label6);
-            this.panel17.Location = new System.Drawing.Point(103, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(665, 100);
-            this.panel17.TabIndex = 1;
+            this.AppartmentsPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AppartmentsPageTitlePanel.Controls.Add(this.AppartmentsPageTitleLabel);
+            this.AppartmentsPageTitlePanel.Location = new System.Drawing.Point(103, 0);
+            this.AppartmentsPageTitlePanel.Name = "AppartmentsPageTitlePanel";
+            this.AppartmentsPageTitlePanel.Size = new System.Drawing.Size(665, 100);
+            this.AppartmentsPageTitlePanel.TabIndex = 1;
             // 
-            // label6
+            // AppartmentsPageTitleLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(490, 91);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Appartments";
+            this.AppartmentsPageTitleLabel.AutoSize = true;
+            this.AppartmentsPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppartmentsPageTitleLabel.Location = new System.Drawing.Point(6, 0);
+            this.AppartmentsPageTitleLabel.Name = "AppartmentsPageTitleLabel";
+            this.AppartmentsPageTitleLabel.Size = new System.Drawing.Size(490, 91);
+            this.AppartmentsPageTitleLabel.TabIndex = 0;
+            this.AppartmentsPageTitleLabel.Text = "Appartments";
             // 
-            // panel18
+            // AppartmentsPageButtonPanel
             // 
-            this.panel18.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel18.Controls.Add(this.AppartmentsPageButtonReport);
-            this.panel18.Controls.Add(this.AppartmentsPageButtonHouses);
-            this.panel18.Controls.Add(this.AppartmentsPageButtonAppartments);
-            this.panel18.Controls.Add(this.AppartmentsPageButtonHome);
-            this.panel18.Location = new System.Drawing.Point(3, 0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(100, 400);
-            this.panel18.TabIndex = 0;
+            this.AppartmentsPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonReport);
+            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonHouses);
+            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonAppartments);
+            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonHome);
+            this.AppartmentsPageButtonPanel.Location = new System.Drawing.Point(3, 0);
+            this.AppartmentsPageButtonPanel.Name = "AppartmentsPageButtonPanel";
+            this.AppartmentsPageButtonPanel.Size = new System.Drawing.Size(100, 400);
+            this.AppartmentsPageButtonPanel.TabIndex = 0;
             // 
             // AppartmentsPageButtonReport
             // 
@@ -282,9 +287,9 @@ namespace CIS_129_Final
             // 
             // HousesPageTab
             // 
-            this.HousesPageTab.Controls.Add(this.panel19);
-            this.HousesPageTab.Controls.Add(this.panel20);
-            this.HousesPageTab.Controls.Add(this.panel21);
+            this.HousesPageTab.Controls.Add(this.HousesPagePanel);
+            this.HousesPageTab.Controls.Add(this.HousesPageTitlePanel);
+            this.HousesPageTab.Controls.Add(this.HousesPageButtonPanel);
             this.HousesPageTab.Location = new System.Drawing.Point(4, 22);
             this.HousesPageTab.Name = "HousesPageTab";
             this.HousesPageTab.Padding = new System.Windows.Forms.Padding(3);
@@ -293,44 +298,44 @@ namespace CIS_129_Final
             this.HousesPageTab.Text = "Houses";
             this.HousesPageTab.UseVisualStyleBackColor = true;
             // 
-            // panel19
+            // HousesPagePanel
             // 
-            this.panel19.Location = new System.Drawing.Point(109, 106);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(653, 294);
-            this.panel19.TabIndex = 2;
+            this.HousesPagePanel.Location = new System.Drawing.Point(109, 106);
+            this.HousesPagePanel.Name = "HousesPagePanel";
+            this.HousesPagePanel.Size = new System.Drawing.Size(653, 294);
+            this.HousesPagePanel.TabIndex = 2;
             // 
-            // panel20
+            // HousesPageTitlePanel
             // 
-            this.panel20.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel20.Controls.Add(this.label7);
-            this.panel20.Location = new System.Drawing.Point(103, 0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(665, 100);
-            this.panel20.TabIndex = 1;
+            this.HousesPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HousesPageTitlePanel.Controls.Add(this.HousesPageTitleLabel);
+            this.HousesPageTitlePanel.Location = new System.Drawing.Point(103, 0);
+            this.HousesPageTitlePanel.Name = "HousesPageTitlePanel";
+            this.HousesPageTitlePanel.Size = new System.Drawing.Size(665, 100);
+            this.HousesPageTitlePanel.TabIndex = 1;
             // 
-            // label7
+            // HousesPageTitleLabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 0);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(309, 91);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Houses";
+            this.HousesPageTitleLabel.AutoSize = true;
+            this.HousesPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HousesPageTitleLabel.Location = new System.Drawing.Point(6, 0);
+            this.HousesPageTitleLabel.Name = "HousesPageTitleLabel";
+            this.HousesPageTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.HousesPageTitleLabel.Size = new System.Drawing.Size(309, 91);
+            this.HousesPageTitleLabel.TabIndex = 0;
+            this.HousesPageTitleLabel.Text = "Houses";
             // 
-            // panel21
+            // HousesPageButtonPanel
             // 
-            this.panel21.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel21.Controls.Add(this.HousesPageButtonReport);
-            this.panel21.Controls.Add(this.HousesPageButtonHouses);
-            this.panel21.Controls.Add(this.HousesPageButtonAppartments);
-            this.panel21.Controls.Add(this.HousesPageButtonHome);
-            this.panel21.Location = new System.Drawing.Point(3, 0);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(100, 400);
-            this.panel21.TabIndex = 0;
+            this.HousesPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonReport);
+            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonHouses);
+            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonAppartments);
+            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonHome);
+            this.HousesPageButtonPanel.Location = new System.Drawing.Point(3, 0);
+            this.HousesPageButtonPanel.Name = "HousesPageButtonPanel";
+            this.HousesPageButtonPanel.Size = new System.Drawing.Size(100, 400);
+            this.HousesPageButtonPanel.TabIndex = 0;
             // 
             // HousesPageButtonReport
             // 
@@ -375,8 +380,8 @@ namespace CIS_129_Final
             // ReportPageTab
             // 
             this.ReportPageTab.Controls.Add(this.ReportViewer);
-            this.ReportPageTab.Controls.Add(this.panel23);
-            this.ReportPageTab.Controls.Add(this.panel24);
+            this.ReportPageTab.Controls.Add(this.ReportPageTitlePanel);
+            this.ReportPageTab.Controls.Add(this.ReportPageButtonPanel);
             this.ReportPageTab.Location = new System.Drawing.Point(4, 22);
             this.ReportPageTab.Name = "ReportPageTab";
             this.ReportPageTab.Padding = new System.Windows.Forms.Padding(3);
@@ -385,36 +390,45 @@ namespace CIS_129_Final
             this.ReportPageTab.Text = "Report";
             this.ReportPageTab.UseVisualStyleBackColor = true;
             // 
-            // panel23
+            // ReportViewer
             // 
-            this.panel23.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel23.Controls.Add(this.label8);
-            this.panel23.Location = new System.Drawing.Point(103, 0);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(665, 100);
-            this.panel23.TabIndex = 1;
+            this.ReportViewer.LocalReport.ReportEmbeddedResource = "CIS_129_Final.FullReport.rdlc";
+            this.ReportViewer.Location = new System.Drawing.Point(103, 101);
+            this.ReportViewer.Name = "ReportViewer";
+            this.ReportViewer.ServerReport.BearerToken = null;
+            this.ReportViewer.Size = new System.Drawing.Size(665, 299);
+            this.ReportViewer.TabIndex = 2;
             // 
-            // label8
+            // ReportPageTitlePanel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(278, 91);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Report";
+            this.ReportPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ReportPageTitlePanel.Controls.Add(this.ReportPageTitleLabel);
+            this.ReportPageTitlePanel.Location = new System.Drawing.Point(103, 0);
+            this.ReportPageTitlePanel.Name = "ReportPageTitlePanel";
+            this.ReportPageTitlePanel.Size = new System.Drawing.Size(665, 100);
+            this.ReportPageTitlePanel.TabIndex = 1;
             // 
-            // panel24
+            // ReportPageTitleLabel
             // 
-            this.panel24.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel24.Controls.Add(this.ReportPageButtonReport);
-            this.panel24.Controls.Add(this.ReportPageButtonHouses);
-            this.panel24.Controls.Add(this.ReportPageButtonAppartments);
-            this.panel24.Controls.Add(this.ReportPageButtonHome);
-            this.panel24.Location = new System.Drawing.Point(3, 0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(100, 400);
-            this.panel24.TabIndex = 0;
+            this.ReportPageTitleLabel.AutoSize = true;
+            this.ReportPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportPageTitleLabel.Location = new System.Drawing.Point(6, 0);
+            this.ReportPageTitleLabel.Name = "ReportPageTitleLabel";
+            this.ReportPageTitleLabel.Size = new System.Drawing.Size(278, 91);
+            this.ReportPageTitleLabel.TabIndex = 0;
+            this.ReportPageTitleLabel.Text = "Report";
+            // 
+            // ReportPageButtonPanel
+            // 
+            this.ReportPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonReport);
+            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonHouses);
+            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonAppartments);
+            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonHome);
+            this.ReportPageButtonPanel.Location = new System.Drawing.Point(3, 0);
+            this.ReportPageButtonPanel.Name = "ReportPageButtonPanel";
+            this.ReportPageButtonPanel.Size = new System.Drawing.Size(100, 400);
+            this.ReportPageButtonPanel.TabIndex = 0;
             // 
             // ReportPageButtonReport
             // 
@@ -456,13 +470,15 @@ namespace CIS_129_Final
             this.ReportPageButtonHome.UseVisualStyleBackColor = true;
             this.ReportPageButtonHome.Click += new System.EventHandler(this.GoToHomePage);
             // 
-            // ReportViewer
+            // appartmentDatabaseDataSetBindingSource
             // 
-            this.ReportViewer.Location = new System.Drawing.Point(103, 100);
-            this.ReportViewer.Name = "ReportViewer";
-            this.ReportViewer.ServerReport.BearerToken = null;
-            this.ReportViewer.Size = new System.Drawing.Size(665, 300);
-            this.ReportViewer.TabIndex = 2;
+            this.appartmentDatabaseDataSetBindingSource.DataMember = "Table";
+            this.appartmentDatabaseDataSetBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet1";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // MainWindow
             // 
@@ -475,21 +491,23 @@ namespace CIS_129_Final
             this.Load += new System.EventHandler(this.MainWindow_Load);
             this.MainWindowMaterialTabControler.ResumeLayout(false);
             this.HomePageTab.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
+            this.HomePageTitlePanel.ResumeLayout(false);
+            this.HomePageTitlePanel.PerformLayout();
+            this.HomePageButtonPanel.ResumeLayout(false);
             this.AppartmentsPageTab.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel18.ResumeLayout(false);
+            this.AppartmentsPageTitlePanel.ResumeLayout(false);
+            this.AppartmentsPageTitlePanel.PerformLayout();
+            this.AppartmentsPageButtonPanel.ResumeLayout(false);
             this.HousesPageTab.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel20.PerformLayout();
-            this.panel21.ResumeLayout(false);
+            this.HousesPageTitlePanel.ResumeLayout(false);
+            this.HousesPageTitlePanel.PerformLayout();
+            this.HousesPageButtonPanel.ResumeLayout(false);
             this.ReportPageTab.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel23.PerformLayout();
-            this.panel24.ResumeLayout(false);
+            this.ReportPageTitlePanel.ResumeLayout(false);
+            this.ReportPageTitlePanel.PerformLayout();
+            this.ReportPageButtonPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,32 +515,31 @@ namespace CIS_129_Final
         #endregion
         private MaterialSkin.Controls.MaterialTabControl MainWindowMaterialTabControler;
         private TabPage HomePageTab;
-        private Panel panel13;
-        private Panel panel14;
-        private Label label5;
-        private Panel panel15;
+        private Panel HomePageTitlePanel;
+        private Label HomePageTitleLabel;
+        private Panel HomePageButtonPanel;
         private Button HomePageButtonReport;
         private Button HomePageButtonHouses;
         private Button HomePageButtonAppartments;
         private Button HomePageButtonHome;
         private TabPage AppartmentsPageTab;
-        private Panel panel16;
-        private Panel panel17;
-        private Label label6;
-        private Panel panel18;
+        private Panel AppartmentsPagePanel;
+        private Panel AppartmentsPageTitlePanel;
+        private Label AppartmentsPageTitleLabel;
+        private Panel AppartmentsPageButtonPanel;
         private TabPage HousesPageTab;
-        private Panel panel19;
-        private Panel panel20;
-        private Label label7;
-        private Panel panel21;
+        private Panel HousesPagePanel;
+        private Panel HousesPageTitlePanel;
+        private Label HousesPageTitleLabel;
+        private Panel HousesPageButtonPanel;
         private Button HousesPageButtonReport;
         private Button HousesPageButtonHouses;
         private Button HousesPageButtonAppartments;
         private Button HousesPageButtonHome;
         private TabPage ReportPageTab;
-        private Panel panel23;
-        private Label label8;
-        private Panel panel24;
+        private Panel ReportPageTitlePanel;
+        private Label ReportPageTitleLabel;
+        private Panel ReportPageButtonPanel;
         private Button ReportPageButtonReport;
         private Button ReportPageButtonHouses;
         private Button ReportPageButtonAppartments;
@@ -532,6 +549,10 @@ namespace CIS_129_Final
         private Button AppartmentsPageButtonAppartments;
         private Button AppartmentsPageButtonHome;
         private Microsoft.Reporting.WinForms.ReportViewer ReportViewer;
+        
+        private System.Windows.Forms.BindingSource appartmentDatabaseDataSetBindingSource;
+        private DataSet1 dataSet;
+        private Panel HomePagePanel;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +15,7 @@ namespace CIS_129_Final
     {
         public MainWindow()
         {
-            SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+            //SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
             InitializeComponent();
 
         }
@@ -61,13 +62,25 @@ namespace CIS_129_Final
             //having them basicly reload the page you are looking at sounds dumb
             //this is to not do that.
         }
+        //NULL Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+        
+        void InsertDataToReportViewer(ReportViewer REPORTVIEWER, DataTable DATA)
+        {
+            Microsoft.Reporting.WinForms.ReportDataSource DataSourceInto = new Microsoft.Reporting.WinForms.ReportDataSource();
+
+            DataSourceInto.Name = REPORTVIEWER.LocalReport.GetDataSourceNames()[0];
+            DataSourceInto.Value = DATA;
+
+            REPORTVIEWER.LocalReport.DataSources.Add(DataSourceInto);
+
+            REPORTVIEWER.RefreshReport();
+        }
 
         private void MainWindow_Load(object sender, EventArgs e)
         {
-
-            this.ReportViewer.RefreshReport();
             this.ReportViewer.RefreshReport();
         }
-        //NULL Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     }
 }
