@@ -24,7 +24,7 @@ namespace CIS_129_Final {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSet1 : global::System.Data.DataSet {
         
-        private TableDataTable tableTable;
+        private Table1DataTable tableTable1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace CIS_129_Final {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["Table1"] != null)) {
+                    base.Tables.Add(new Table1DataTable(ds.Tables["Table1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace CIS_129_Final {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public TableDataTable Table {
+        public Table1DataTable Table1 {
             get {
-                return this.tableTable;
+                return this.tableTable1;
             }
         }
         
@@ -152,8 +152,8 @@ namespace CIS_129_Final {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Table"] != null)) {
-                    base.Tables.Add(new TableDataTable(ds.Tables["Table"]));
+                if ((ds.Tables["Table1"] != null)) {
+                    base.Tables.Add(new Table1DataTable(ds.Tables["Table1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace CIS_129_Final {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableTable = ((TableDataTable)(base.Tables["Table"]));
+            this.tableTable1 = ((Table1DataTable)(base.Tables["Table1"]));
             if ((initTable == true)) {
-                if ((this.tableTable != null)) {
-                    this.tableTable.InitVars();
+                if ((this.tableTable1 != null)) {
+                    this.tableTable1.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace CIS_129_Final {
             this.Namespace = "http://tempuri.org/DataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableTable = new TableDataTable();
-            base.Tables.Add(this.tableTable);
+            this.tableTable1 = new Table1DataTable();
+            base.Tables.Add(this.tableTable1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeTable() {
+        private bool ShouldSerializeTable1() {
             return false;
         }
         
@@ -270,25 +270,27 @@ namespace CIS_129_Final {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void TableRowChangeEventHandler(object sender, TableRowChangeEvent e);
+        public delegate void Table1RowChangeEventHandler(object sender, Table1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class TableDataTable : global::System.Data.TypedTableBase<TableRow> {
+        public partial class Table1DataTable : global::System.Data.TypedTableBase<Table1Row> {
             
             private global::System.Data.DataColumn columnUnitId;
             
-            private global::System.Data.DataColumn columnPowerInWats;
+            private global::System.Data.DataColumn columnPowerInKilowattHoursPerMonth;
+            
+            private global::System.Data.DataColumn columnPowerInKilowattHoursPerDay;
             
             private global::System.Data.DataColumn columnAreaInSquareFeet;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableDataTable() {
-                this.TableName = "Table";
+            public Table1DataTable() {
+                this.TableName = "Table1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +298,7 @@ namespace CIS_129_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TableDataTable(global::System.Data.DataTable table) {
+            internal Table1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,7 +315,7 @@ namespace CIS_129_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected TableDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected Table1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -328,9 +330,17 @@ namespace CIS_129_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PowerInWatsColumn {
+            public global::System.Data.DataColumn PowerInKilowattHoursPerMonthColumn {
                 get {
-                    return this.columnPowerInWats;
+                    return this.columnPowerInKilowattHoursPerMonth;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PowerInKilowattHoursPerDayColumn {
+                get {
+                    return this.columnPowerInKilowattHoursPerDay;
                 }
             }
             
@@ -353,54 +363,55 @@ namespace CIS_129_Final {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow this[int index] {
+            public Table1Row this[int index] {
                 get {
-                    return ((TableRow)(this.Rows[index]));
+                    return ((Table1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanging;
+            public event Table1RowChangeEventHandler Table1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TableRowChangeEventHandler TableRowChanged;
+            public event Table1RowChangeEventHandler Table1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleting;
+            public event Table1RowChangeEventHandler Table1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event TableRowChangeEventHandler TableRowDeleted;
+            public event Table1RowChangeEventHandler Table1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddTableRow(TableRow row) {
+            public void AddTable1Row(Table1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow AddTableRow(int UnitId, int PowerInWats, int AreaInSquareFeet) {
-                TableRow rowTableRow = ((TableRow)(this.NewRow()));
+            public Table1Row AddTable1Row(int UnitId, int PowerInKilowattHoursPerMonth, int PowerInKilowattHoursPerDay, int AreaInSquareFeet) {
+                Table1Row rowTable1Row = ((Table1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         UnitId,
-                        PowerInWats,
+                        PowerInKilowattHoursPerMonth,
+                        PowerInKilowattHoursPerDay,
                         AreaInSquareFeet};
-                rowTableRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowTableRow);
-                return rowTableRow;
+                rowTable1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTable1Row);
+                return rowTable1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow FindByUnitId(int UnitId) {
-                return ((TableRow)(this.Rows.Find(new object[] {
+            public Table1Row FindByUnitId(int UnitId) {
+                return ((Table1Row)(this.Rows.Find(new object[] {
                             UnitId})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                TableDataTable cln = ((TableDataTable)(base.Clone()));
+                Table1DataTable cln = ((Table1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,14 +419,15 @@ namespace CIS_129_Final {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new TableDataTable();
+                return new Table1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnUnitId = base.Columns["UnitId"];
-                this.columnPowerInWats = base.Columns["PowerInWats"];
+                this.columnPowerInKilowattHoursPerMonth = base.Columns["PowerInKilowattHoursPerMonth"];
+                this.columnPowerInKilowattHoursPerDay = base.Columns["PowerInKilowattHoursPerDay"];
                 this.columnAreaInSquareFeet = base.Columns["AreaInSquareFeet"];
             }
             
@@ -424,49 +436,45 @@ namespace CIS_129_Final {
             private void InitClass() {
                 this.columnUnitId = new global::System.Data.DataColumn("UnitId", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnitId);
-                this.columnPowerInWats = new global::System.Data.DataColumn("PowerInWats", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPowerInWats);
+                this.columnPowerInKilowattHoursPerMonth = new global::System.Data.DataColumn("PowerInKilowattHoursPerMonth", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPowerInKilowattHoursPerMonth);
+                this.columnPowerInKilowattHoursPerDay = new global::System.Data.DataColumn("PowerInKilowattHoursPerDay", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPowerInKilowattHoursPerDay);
                 this.columnAreaInSquareFeet = new global::System.Data.DataColumn("AreaInSquareFeet", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAreaInSquareFeet);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnUnitId}, true));
                 this.columnUnitId.AllowDBNull = false;
                 this.columnUnitId.Unique = true;
-                this.columnPowerInWats.AllowDBNull = false;
+                this.columnPowerInKilowattHoursPerMonth.AllowDBNull = false;
+                this.columnPowerInKilowattHoursPerDay.AllowDBNull = false;
                 this.columnAreaInSquareFeet.AllowDBNull = false;
-                this.ExtendedProperties.Add("Generator_RowClassName", "TableRow");
-                this.ExtendedProperties.Add("Generator_RowEvArgName", "TableRowChangeEvent");
-                this.ExtendedProperties.Add("Generator_RowEvHandlerName", "TableRowChangeEventHandler");
-                this.ExtendedProperties.Add("Generator_TableClassName", "TableDataTable");
-                this.ExtendedProperties.Add("Generator_TablePropName", "Table");
-                this.ExtendedProperties.Add("Generator_TableVarName", "tableTable");
-                this.ExtendedProperties.Add("Generator_UserTableName", "Table");
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow NewTableRow() {
-                return ((TableRow)(this.NewRow()));
+            public Table1Row NewTable1Row() {
+                return ((Table1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new TableRow(builder);
+                return new Table1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(TableRow);
+                return typeof(Table1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.TableRowChanged != null)) {
-                    this.TableRowChanged(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.Table1RowChanged != null)) {
+                    this.Table1RowChanged(this, new Table1RowChangeEvent(((Table1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -474,8 +482,8 @@ namespace CIS_129_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.TableRowChanging != null)) {
-                    this.TableRowChanging(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.Table1RowChanging != null)) {
+                    this.Table1RowChanging(this, new Table1RowChangeEvent(((Table1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -483,8 +491,8 @@ namespace CIS_129_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.TableRowDeleted != null)) {
-                    this.TableRowDeleted(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.Table1RowDeleted != null)) {
+                    this.Table1RowDeleted(this, new Table1RowChangeEvent(((Table1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -492,14 +500,14 @@ namespace CIS_129_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.TableRowDeleting != null)) {
-                    this.TableRowDeleting(this, new TableRowChangeEvent(((TableRow)(e.Row)), e.Action));
+                if ((this.Table1RowDeleting != null)) {
+                    this.Table1RowDeleting(this, new Table1RowChangeEvent(((Table1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveTableRow(TableRow row) {
+            public void RemoveTable1Row(Table1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -526,7 +534,7 @@ namespace CIS_129_Final {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "TableDataTable";
+                attribute2.FixedValue = "Table1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -570,36 +578,47 @@ namespace CIS_129_Final {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class TableRow : global::System.Data.DataRow {
+        public partial class Table1Row : global::System.Data.DataRow {
             
-            private TableDataTable tableTable;
+            private Table1DataTable tableTable1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal TableRow(global::System.Data.DataRowBuilder rb) : 
+            internal Table1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableTable = ((TableDataTable)(this.Table));
+                this.tableTable1 = ((Table1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int UnitId {
                 get {
-                    return ((int)(this[this.tableTable.UnitIdColumn]));
+                    return ((int)(this[this.tableTable1.UnitIdColumn]));
                 }
                 set {
-                    this[this.tableTable.UnitIdColumn] = value;
+                    this[this.tableTable1.UnitIdColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int PowerInWats {
+            public int PowerInKilowattHoursPerMonth {
                 get {
-                    return ((int)(this[this.tableTable.PowerInWatsColumn]));
+                    return ((int)(this[this.tableTable1.PowerInKilowattHoursPerMonthColumn]));
                 }
                 set {
-                    this[this.tableTable.PowerInWatsColumn] = value;
+                    this[this.tableTable1.PowerInKilowattHoursPerMonthColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int PowerInKilowattHoursPerDay {
+                get {
+                    return ((int)(this[this.tableTable1.PowerInKilowattHoursPerDayColumn]));
+                }
+                set {
+                    this[this.tableTable1.PowerInKilowattHoursPerDayColumn] = value;
                 }
             }
             
@@ -607,10 +626,10 @@ namespace CIS_129_Final {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public int AreaInSquareFeet {
                 get {
-                    return ((int)(this[this.tableTable.AreaInSquareFeetColumn]));
+                    return ((int)(this[this.tableTable1.AreaInSquareFeetColumn]));
                 }
                 set {
-                    this[this.tableTable.AreaInSquareFeetColumn] = value;
+                    this[this.tableTable1.AreaInSquareFeetColumn] = value;
                 }
             }
         }
@@ -619,22 +638,22 @@ namespace CIS_129_Final {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class TableRowChangeEvent : global::System.EventArgs {
+        public class Table1RowChangeEvent : global::System.EventArgs {
             
-            private TableRow eventRow;
+            private Table1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRowChangeEvent(TableRow row, global::System.Data.DataRowAction action) {
+            public Table1RowChangeEvent(Table1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public TableRow Row {
+            public Table1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -662,7 +681,7 @@ namespace CIS_129_Final.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class TableTableAdapter : global::System.ComponentModel.Component {
+    public partial class Table1TableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -676,7 +695,7 @@ namespace CIS_129_Final.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public TableTableAdapter() {
+        public Table1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -773,39 +792,41 @@ namespace CIS_129_Final.DataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Table";
+            tableMapping.DataSetTable = "Table1";
             tableMapping.ColumnMappings.Add("UnitId", "UnitId");
-            tableMapping.ColumnMappings.Add("PowerInWats", "PowerInWats");
+            tableMapping.ColumnMappings.Add("PowerInKilowattHoursPerMonth", "PowerInKilowattHoursPerMonth");
+            tableMapping.ColumnMappings.Add("PowerInKilowattHoursPerDay", "PowerInKilowattHoursPerDay");
             tableMapping.ColumnMappings.Add("AreaInSquareFeet", "AreaInSquareFeet");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Table] WHERE (([UnitId] = @Original_UnitId) AND ([PowerInWats]" +
-                " = @Original_PowerInWats) AND ([AreaInSquareFeet] = @Original_AreaInSquareFeet))" +
-                "";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Table] WHERE (([UnitId] = @Original_UnitId) AND ([PowerInKilowattHoursPerMonth] = @Original_PowerInKilowattHoursPerMonth) AND ([PowerInKilowattHoursPerDay] = @Original_PowerInKilowattHoursPerDay) AND ([AreaInSquareFeet] = @Original_AreaInSquareFeet))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInWats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInWats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInKilowattHoursPerMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInKilowattHoursPerDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerDay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AreaInSquareFeet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AreaInSquareFeet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Table] ([UnitId], [PowerInWats], [AreaInSquareFeet]) VALUES (@" +
-                "UnitId, @PowerInWats, @AreaInSquareFeet);\r\nSELECT UnitId, PowerInWats, AreaInSqu" +
-                "areFeet FROM [Table] WHERE (UnitId = @UnitId)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Table] ([UnitId], [PowerInKilowattHoursPerMonth], [PowerInKilowattHoursPerDay], [AreaInSquareFeet]) VALUES (@UnitId, @PowerInKilowattHoursPerMonth, @PowerInKilowattHoursPerDay, @AreaInSquareFeet);
+SELECT UnitId, PowerInKilowattHoursPerMonth, PowerInKilowattHoursPerDay, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitId)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInWats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInWats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInKilowattHoursPerMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInKilowattHoursPerDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerDay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AreaInSquareFeet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AreaInSquareFeet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [UnitId] = @UnitId, [PowerInWats] = @PowerInWats, [AreaInSquareFeet] = @AreaInSquareFeet WHERE (([UnitId] = @Original_UnitId) AND ([PowerInWats] = @Original_PowerInWats) AND ([AreaInSquareFeet] = @Original_AreaInSquareFeet));
-SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitId)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Table] SET [UnitId] = @UnitId, [PowerInKilowattHoursPerMonth] = @PowerInKilowattHoursPerMonth, [PowerInKilowattHoursPerDay] = @PowerInKilowattHoursPerDay, [AreaInSquareFeet] = @AreaInSquareFeet WHERE (([UnitId] = @Original_UnitId) AND ([PowerInKilowattHoursPerMonth] = @Original_PowerInKilowattHoursPerMonth) AND ([PowerInKilowattHoursPerDay] = @Original_PowerInKilowattHoursPerDay) AND ([AreaInSquareFeet] = @Original_AreaInSquareFeet));
+SELECT UnitId, PowerInKilowattHoursPerMonth, PowerInKilowattHoursPerDay, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitId)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInWats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInWats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInKilowattHoursPerMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerMonth", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PowerInKilowattHoursPerDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerDay", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AreaInSquareFeet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AreaInSquareFeet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_UnitId", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "UnitId", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInWats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInWats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInKilowattHoursPerMonth", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerMonth", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PowerInKilowattHoursPerDay", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PowerInKilowattHoursPerDay", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AreaInSquareFeet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AreaInSquareFeet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
@@ -822,7 +843,8 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT UnitId, PowerInWats, AreaInSquareFeet FROM dbo.[Table]";
+            this._commandCollection[0].CommandText = "SELECT UnitId, PowerInKilowattHoursPerMonth, PowerInKilowattHoursPerDay, AreaInSq" +
+                "uareFeet FROM dbo.[Table]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -830,7 +852,7 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.TableDataTable dataTable) {
+        public virtual int Fill(DataSet1.Table1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -843,9 +865,9 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.TableDataTable GetData() {
+        public virtual DataSet1.Table1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.TableDataTable dataTable = new DataSet1.TableDataTable();
+            DataSet1.Table1DataTable dataTable = new DataSet1.Table1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -853,7 +875,7 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSet1.TableDataTable dataTable) {
+        public virtual int Update(DataSet1.Table1DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -861,7 +883,7 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Table");
+            return this.Adapter.Update(dataSet, "Table1");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -883,10 +905,11 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_UnitId, int Original_PowerInWats, int Original_AreaInSquareFeet) {
+        public virtual int Delete(int Original_UnitId, int Original_PowerInKilowattHoursPerMonth, int Original_PowerInKilowattHoursPerDay, int Original_AreaInSquareFeet) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_UnitId));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_PowerInWats));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_AreaInSquareFeet));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_PowerInKilowattHoursPerMonth));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_PowerInKilowattHoursPerDay));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_AreaInSquareFeet));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -907,10 +930,11 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int UnitId, int PowerInWats, int AreaInSquareFeet) {
+        public virtual int Insert(int UnitId, int PowerInKilowattHoursPerMonth, int PowerInKilowattHoursPerDay, int AreaInSquareFeet) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(UnitId));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PowerInWats));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(AreaInSquareFeet));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(PowerInKilowattHoursPerMonth));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(PowerInKilowattHoursPerDay));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(AreaInSquareFeet));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -931,13 +955,15 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int UnitId, int PowerInWats, int AreaInSquareFeet, int Original_UnitId, int Original_PowerInWats, int Original_AreaInSquareFeet) {
+        public virtual int Update(int UnitId, int PowerInKilowattHoursPerMonth, int PowerInKilowattHoursPerDay, int AreaInSquareFeet, int Original_UnitId, int Original_PowerInKilowattHoursPerMonth, int Original_PowerInKilowattHoursPerDay, int Original_AreaInSquareFeet) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(UnitId));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PowerInWats));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(AreaInSquareFeet));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_UnitId));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_PowerInWats));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_AreaInSquareFeet));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(PowerInKilowattHoursPerMonth));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(PowerInKilowattHoursPerDay));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(AreaInSquareFeet));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_UnitId));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_PowerInKilowattHoursPerMonth));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_PowerInKilowattHoursPerDay));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_AreaInSquareFeet));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -958,8 +984,8 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int PowerInWats, int AreaInSquareFeet, int Original_UnitId, int Original_PowerInWats, int Original_AreaInSquareFeet) {
-            return this.Update(Original_UnitId, PowerInWats, AreaInSquareFeet, Original_UnitId, Original_PowerInWats, Original_AreaInSquareFeet);
+        public virtual int Update(int PowerInKilowattHoursPerMonth, int PowerInKilowattHoursPerDay, int AreaInSquareFeet, int Original_UnitId, int Original_PowerInKilowattHoursPerMonth, int Original_PowerInKilowattHoursPerDay, int Original_AreaInSquareFeet) {
+            return this.Update(Original_UnitId, PowerInKilowattHoursPerMonth, PowerInKilowattHoursPerDay, AreaInSquareFeet, Original_UnitId, Original_PowerInKilowattHoursPerMonth, Original_PowerInKilowattHoursPerDay, Original_AreaInSquareFeet);
         }
     }
     
@@ -975,7 +1001,7 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         
         private UpdateOrderOption _updateOrder;
         
-        private TableTableAdapter _tableTableAdapter;
+        private Table1TableAdapter _table1TableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -997,12 +1023,12 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public TableTableAdapter TableTableAdapter {
+        public Table1TableAdapter Table1TableAdapter {
             get {
-                return this._tableTableAdapter;
+                return this._table1TableAdapter;
             }
             set {
-                this._tableTableAdapter = value;
+                this._table1TableAdapter = value;
             }
         }
         
@@ -1025,9 +1051,9 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._tableTableAdapter != null) 
-                            && (this._tableTableAdapter.Connection != null))) {
-                    return this._tableTableAdapter.Connection;
+                if (((this._table1TableAdapter != null) 
+                            && (this._table1TableAdapter.Connection != null))) {
+                    return this._table1TableAdapter.Connection;
                 }
                 return null;
             }
@@ -1042,7 +1068,7 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._tableTableAdapter != null)) {
+                if ((this._table1TableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1056,12 +1082,12 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._table1TableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Table1.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(updatedRows));
+                    result = (result + this._table1TableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1075,11 +1101,11 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._table1TableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Table1.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(addedRows));
+                    result = (result + this._table1TableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1093,11 +1119,11 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._tableTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Table.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._table1TableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Table1.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tableTableAdapter.Update(deletedRows));
+                    result = (result + this._table1TableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1140,8 +1166,8 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._tableTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tableTableAdapter.Connection) == false))) {
+            if (((this._table1TableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._table1TableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1177,13 +1203,13 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._tableTableAdapter != null)) {
-                    revertConnections.Add(this._tableTableAdapter, this._tableTableAdapter.Connection);
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._tableTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tableTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tableTableAdapter.Adapter);
+                if ((this._table1TableAdapter != null)) {
+                    revertConnections.Add(this._table1TableAdapter, this._table1TableAdapter.Connection);
+                    this._table1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._table1TableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._table1TableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._table1TableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._table1TableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1244,9 +1270,9 @@ SELECT UnitId, PowerInWats, AreaInSquareFeet FROM [Table] WHERE (UnitId = @UnitI
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._tableTableAdapter != null)) {
-                    this._tableTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tableTableAdapter]));
-                    this._tableTableAdapter.Transaction = null;
+                if ((this._table1TableAdapter != null)) {
+                    this._table1TableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._table1TableAdapter]));
+                    this._table1TableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

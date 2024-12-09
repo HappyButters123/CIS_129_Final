@@ -1,7 +1,8 @@
 ﻿CREATE TABLE [dbo].[Table] (
-    [UnitId]           INT NOT NULL DEFAULT 0,
-    [PowerInWats]      INT NOT NULL DEFAULT 0,
-    [AreaInSquareFeet] INT NOT NULL DEFAULT 0,
+    [UnitId]           INT DEFAULT ((0)) NOT NULL,
+    [PowerInKilowattHoursPerMonth]      INT DEFAULT ((0)) NOT NULL,
+    [PowerInKilowattHoursPerDay]      INT DEFAULT ((0)) NOT NULL,
+    [AreaInSquareFeet] INT DEFAULT ((0)) NOT NULL,
     PRIMARY KEY CLUSTERED ([UnitId] ASC)
 );
 

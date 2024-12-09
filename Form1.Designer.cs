@@ -32,113 +32,491 @@ namespace CIS_129_Final
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.MainWindowMaterialTabControler = new MaterialSkin.Controls.MaterialTabControl();
+            this.appartmentDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet = new CIS_129_Final.DataSet1();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReportPanelTopBanner = new System.Windows.Forms.Panel();
+            this.ReportButtonSettings = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.ReportLablaTitle = new System.Windows.Forms.Label();
+            this.ReportPanelSideBanner = new System.Windows.Forms.Panel();
+            this.ReportButtonReportPage = new System.Windows.Forms.Button();
+            this.ReportButtonHousesPage = new System.Windows.Forms.Button();
+            this.ReportButtonAppartmentsPage = new System.Windows.Forms.Button();
+            this.ReportButtonHomePage = new System.Windows.Forms.Button();
+            this.HousesPage = new System.Windows.Forms.TabPage();
+            this.HousesPanel = new System.Windows.Forms.Panel();
+            this.HousesPanelTopBanner = new System.Windows.Forms.Panel();
+            this.HousesButtonsSettingsPage = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.HousesLableTitle = new System.Windows.Forms.Label();
+            this.HousesPanelSideBanner = new System.Windows.Forms.Panel();
+            this.HousesButtonsReportPage = new System.Windows.Forms.Button();
+            this.HousesButtonsHousesPage = new System.Windows.Forms.Button();
+            this.HousesButtonsAppartmentsPage = new System.Windows.Forms.Button();
+            this.HousesButtonsHomePage = new System.Windows.Forms.Button();
+            this.AppartmentsPage = new System.Windows.Forms.TabPage();
+            this.AppartmentsPanel = new System.Windows.Forms.Panel();
+            this.AppartmentsPanelTopBanner = new System.Windows.Forms.Panel();
+            this.AppartmentsButtonsSettingsPage = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.AppartmentsLableTitle = new System.Windows.Forms.Label();
+            this.AppartmentsPanelSideBanner = new System.Windows.Forms.Panel();
+            this.AppartmentsButtonsReportPage = new System.Windows.Forms.Button();
+            this.AppartmentsButtonsHousesPage = new System.Windows.Forms.Button();
+            this.AppartmentsButtonsAppartmentsPage = new System.Windows.Forms.Button();
+            this.AppartmentsButtonsHomePage = new System.Windows.Forms.Button();
             this.HomePageTab = new System.Windows.Forms.TabPage();
-            this.HomePagePanel = new System.Windows.Forms.Panel();
+            this.HomePagePanel2 = new System.Windows.Forms.Panel();
             this.HomePageTitlePanel = new System.Windows.Forms.Panel();
+            this.HomePageSettingsButton = new System.Windows.Forms.Button();
+            this.HomePagePanel = new System.Windows.Forms.Panel();
             this.HomePageTitleLabel = new System.Windows.Forms.Label();
             this.HomePageButtonPanel = new System.Windows.Forms.Panel();
             this.HomePageButtonReport = new System.Windows.Forms.Button();
             this.HomePageButtonHouses = new System.Windows.Forms.Button();
             this.HomePageButtonAppartments = new System.Windows.Forms.Button();
             this.HomePageButtonHome = new System.Windows.Forms.Button();
-            this.AppartmentsPageTab = new System.Windows.Forms.TabPage();
-            this.AppartmentsPagePanel = new System.Windows.Forms.Panel();
-            this.AppartmentsPageTitlePanel = new System.Windows.Forms.Panel();
-            this.AppartmentsPageTitleLabel = new System.Windows.Forms.Label();
-            this.AppartmentsPageButtonPanel = new System.Windows.Forms.Panel();
-            this.AppartmentsPageButtonReport = new System.Windows.Forms.Button();
-            this.AppartmentsPageButtonHouses = new System.Windows.Forms.Button();
-            this.AppartmentsPageButtonAppartments = new System.Windows.Forms.Button();
-            this.AppartmentsPageButtonHome = new System.Windows.Forms.Button();
-            this.HousesPageTab = new System.Windows.Forms.TabPage();
-            this.HousesPagePanel = new System.Windows.Forms.Panel();
-            this.HousesPageTitlePanel = new System.Windows.Forms.Panel();
-            this.HousesPageTitleLabel = new System.Windows.Forms.Label();
-            this.HousesPageButtonPanel = new System.Windows.Forms.Panel();
-            this.HousesPageButtonReport = new System.Windows.Forms.Button();
-            this.HousesPageButtonHouses = new System.Windows.Forms.Button();
-            this.HousesPageButtonAppartments = new System.Windows.Forms.Button();
-            this.HousesPageButtonHome = new System.Windows.Forms.Button();
-            this.ReportPageTab = new System.Windows.Forms.TabPage();
-            this.ReportViewer = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.ReportPageTitlePanel = new System.Windows.Forms.Panel();
-            this.ReportPageTitleLabel = new System.Windows.Forms.Label();
-            this.ReportPageButtonPanel = new System.Windows.Forms.Panel();
-            this.ReportPageButtonReport = new System.Windows.Forms.Button();
-            this.ReportPageButtonHouses = new System.Windows.Forms.Button();
-            this.ReportPageButtonAppartments = new System.Windows.Forms.Button();
-            this.ReportPageButtonHome = new System.Windows.Forms.Button();
-            this.appartmentDatabaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet = new CIS_129_Final.DataSet1();
-            this.MainWindowMaterialTabControler.SuspendLayout();
+            this.MainWindowMaterialTabControler = new MaterialSkin.Controls.MaterialTabControl();
+            this.SettingsPage = new System.Windows.Forms.TabPage();
+            this.SettingsPanel = new System.Windows.Forms.Panel();
+            this.SettingsPanelTopBanner = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.SettingsLabelTitle = new System.Windows.Forms.Label();
+            this.SettingsPanelSideBanner = new System.Windows.Forms.Panel();
+            this.SettingsButtonReportPage = new System.Windows.Forms.Button();
+            this.SettingsButtonHousesPage = new System.Windows.Forms.Button();
+            this.SettingsButtonAppartmentsPage = new System.Windows.Forms.Button();
+            this.SettingsButtonHomePage = new System.Windows.Forms.Button();
+            this.plotView1 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView4 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView2 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView3 = new OxyPlot.WindowsForms.PlotView();
+            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            this.ReportPanelTopBanner.SuspendLayout();
+            this.ReportPanelSideBanner.SuspendLayout();
+            this.HousesPage.SuspendLayout();
+            this.HousesPanelTopBanner.SuspendLayout();
+            this.HousesPanelSideBanner.SuspendLayout();
+            this.AppartmentsPage.SuspendLayout();
+            this.AppartmentsPanel.SuspendLayout();
+            this.AppartmentsPanelTopBanner.SuspendLayout();
+            this.AppartmentsPanelSideBanner.SuspendLayout();
             this.HomePageTab.SuspendLayout();
             this.HomePageTitlePanel.SuspendLayout();
             this.HomePageButtonPanel.SuspendLayout();
-            this.AppartmentsPageTab.SuspendLayout();
-            this.AppartmentsPageTitlePanel.SuspendLayout();
-            this.AppartmentsPageButtonPanel.SuspendLayout();
-            this.HousesPageTab.SuspendLayout();
-            this.HousesPageTitlePanel.SuspendLayout();
-            this.HousesPageButtonPanel.SuspendLayout();
-            this.ReportPageTab.SuspendLayout();
-            this.ReportPageTitlePanel.SuspendLayout();
-            this.ReportPageButtonPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
+            this.MainWindowMaterialTabControler.SuspendLayout();
+            this.SettingsPage.SuspendLayout();
+            this.SettingsPanelTopBanner.SuspendLayout();
+            this.SettingsPanelSideBanner.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MainWindowMaterialTabControler
+            // appartmentDatabaseDataSetBindingSource
             // 
-            this.MainWindowMaterialTabControler.Controls.Add(this.HomePageTab);
-            this.MainWindowMaterialTabControler.Controls.Add(this.AppartmentsPageTab);
-            this.MainWindowMaterialTabControler.Controls.Add(this.HousesPageTab);
-            this.MainWindowMaterialTabControler.Controls.Add(this.ReportPageTab);
-            this.MainWindowMaterialTabControler.Depth = 0;
-            this.MainWindowMaterialTabControler.Location = new System.Drawing.Point(1, 12);
-            this.MainWindowMaterialTabControler.MouseState = MaterialSkin.MouseState.HOVER;
-            this.MainWindowMaterialTabControler.Multiline = true;
-            this.MainWindowMaterialTabControler.Name = "MainWindowMaterialTabControler";
-            this.MainWindowMaterialTabControler.SelectedIndex = 0;
-            this.MainWindowMaterialTabControler.Size = new System.Drawing.Size(780, 426);
-            this.MainWindowMaterialTabControler.TabIndex = 2;
+            this.appartmentDatabaseDataSetBindingSource.DataMember = "Table1";
+            this.appartmentDatabaseDataSetBindingSource.DataSource = this.dataSet;
+            // 
+            // dataSet
+            // 
+            this.dataSet.DataSetName = "DataSet1";
+            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.ReportViewer);
+            this.tabPage3.Controls.Add(this.ReportPanelTopBanner);
+            this.tabPage3.Controls.Add(this.ReportPanelSideBanner);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1232, 631);
+            this.tabPage3.TabIndex = 10;
+            this.tabPage3.Text = "Report";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // ReportViewer
+            // 
+            this.ReportViewer.LocalReport.ReportEmbeddedResource = "CIS_129_Final.FullReport.rdlc";
+            this.ReportViewer.Location = new System.Drawing.Point(159, 160);
+            this.ReportViewer.Name = "ReportViewer";
+            this.ReportViewer.ServerReport.BearerToken = null;
+            this.ReportViewer.Size = new System.Drawing.Size(1077, 475);
+            this.ReportViewer.TabIndex = 3;
+            // 
+            // ReportPanelTopBanner
+            // 
+            this.ReportPanelTopBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ReportPanelTopBanner.Controls.Add(this.ReportButtonSettings);
+            this.ReportPanelTopBanner.Controls.Add(this.panel11);
+            this.ReportPanelTopBanner.Controls.Add(this.ReportLablaTitle);
+            this.ReportPanelTopBanner.Location = new System.Drawing.Point(153, 0);
+            this.ReportPanelTopBanner.Name = "ReportPanelTopBanner";
+            this.ReportPanelTopBanner.Size = new System.Drawing.Size(1079, 154);
+            this.ReportPanelTopBanner.TabIndex = 1;
+            // 
+            // ReportButtonSettings
+            // 
+            this.ReportButtonSettings.Location = new System.Drawing.Point(933, 10);
+            this.ReportButtonSettings.Name = "ReportButtonSettings";
+            this.ReportButtonSettings.Size = new System.Drawing.Size(140, 140);
+            this.ReportButtonSettings.TabIndex = 4;
+            this.ReportButtonSettings.Text = "Settings";
+            this.ReportButtonSettings.UseVisualStyleBackColor = true;
+            this.ReportButtonSettings.Click += new System.EventHandler(this.GoToSettiongs);
+            // 
+            // panel11
+            // 
+            this.panel11.Location = new System.Drawing.Point(3, 156);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(653, 294);
+            this.panel11.TabIndex = 3;
+            // 
+            // ReportLablaTitle
+            // 
+            this.ReportLablaTitle.AutoSize = true;
+            this.ReportLablaTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportLablaTitle.Location = new System.Drawing.Point(1, 10);
+            this.ReportLablaTitle.Name = "ReportLablaTitle";
+            this.ReportLablaTitle.Size = new System.Drawing.Size(418, 135);
+            this.ReportLablaTitle.TabIndex = 0;
+            this.ReportLablaTitle.Text = "Report";
+            // 
+            // ReportPanelSideBanner
+            // 
+            this.ReportPanelSideBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ReportPanelSideBanner.Controls.Add(this.ReportButtonReportPage);
+            this.ReportPanelSideBanner.Controls.Add(this.ReportButtonHousesPage);
+            this.ReportPanelSideBanner.Controls.Add(this.ReportButtonAppartmentsPage);
+            this.ReportPanelSideBanner.Controls.Add(this.ReportButtonHomePage);
+            this.ReportPanelSideBanner.Location = new System.Drawing.Point(3, 0);
+            this.ReportPanelSideBanner.Name = "ReportPanelSideBanner";
+            this.ReportPanelSideBanner.Size = new System.Drawing.Size(150, 635);
+            this.ReportPanelSideBanner.TabIndex = 0;
+            // 
+            // ReportButtonReportPage
+            // 
+            this.ReportButtonReportPage.Location = new System.Drawing.Point(5, 481);
+            this.ReportButtonReportPage.Name = "ReportButtonReportPage";
+            this.ReportButtonReportPage.Size = new System.Drawing.Size(140, 140);
+            this.ReportButtonReportPage.TabIndex = 3;
+            this.ReportButtonReportPage.Text = "Report";
+            this.ReportButtonReportPage.UseVisualStyleBackColor = true;
+            this.ReportButtonReportPage.Click += new System.EventHandler(this.GoToNothing);
+            // 
+            // ReportButtonHousesPage
+            // 
+            this.ReportButtonHousesPage.Location = new System.Drawing.Point(5, 327);
+            this.ReportButtonHousesPage.Name = "ReportButtonHousesPage";
+            this.ReportButtonHousesPage.Size = new System.Drawing.Size(140, 140);
+            this.ReportButtonHousesPage.TabIndex = 2;
+            this.ReportButtonHousesPage.Text = "Houses";
+            this.ReportButtonHousesPage.UseVisualStyleBackColor = true;
+            this.ReportButtonHousesPage.Click += new System.EventHandler(this.GoToHouses);
+            // 
+            // ReportButtonAppartmentsPage
+            // 
+            this.ReportButtonAppartmentsPage.Location = new System.Drawing.Point(5, 164);
+            this.ReportButtonAppartmentsPage.Name = "ReportButtonAppartmentsPage";
+            this.ReportButtonAppartmentsPage.Size = new System.Drawing.Size(140, 140);
+            this.ReportButtonAppartmentsPage.TabIndex = 1;
+            this.ReportButtonAppartmentsPage.Text = "Appartments";
+            this.ReportButtonAppartmentsPage.UseVisualStyleBackColor = true;
+            this.ReportButtonAppartmentsPage.Click += new System.EventHandler(this.GoToAppartmentsPage);
+            // 
+            // ReportButtonHomePage
+            // 
+            this.ReportButtonHomePage.Location = new System.Drawing.Point(5, 10);
+            this.ReportButtonHomePage.Name = "ReportButtonHomePage";
+            this.ReportButtonHomePage.Size = new System.Drawing.Size(140, 140);
+            this.ReportButtonHomePage.TabIndex = 0;
+            this.ReportButtonHomePage.Text = "Home";
+            this.ReportButtonHomePage.UseVisualStyleBackColor = true;
+            this.ReportButtonHomePage.Click += new System.EventHandler(this.GoToHomePage);
+            // 
+            // HousesPage
+            // 
+            this.HousesPage.Controls.Add(this.HousesPanel);
+            this.HousesPage.Controls.Add(this.HousesPanelTopBanner);
+            this.HousesPage.Controls.Add(this.HousesPanelSideBanner);
+            this.HousesPage.Location = new System.Drawing.Point(4, 22);
+            this.HousesPage.Name = "HousesPage";
+            this.HousesPage.Padding = new System.Windows.Forms.Padding(3);
+            this.HousesPage.Size = new System.Drawing.Size(1232, 631);
+            this.HousesPage.TabIndex = 9;
+            this.HousesPage.Text = "Houses";
+            this.HousesPage.UseVisualStyleBackColor = true;
+            // 
+            // HousesPanel
+            // 
+            this.HousesPanel.Location = new System.Drawing.Point(159, 160);
+            this.HousesPanel.Name = "HousesPanel";
+            this.HousesPanel.Size = new System.Drawing.Size(1067, 471);
+            this.HousesPanel.TabIndex = 3;
+            // 
+            // HousesPanelTopBanner
+            // 
+            this.HousesPanelTopBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HousesPanelTopBanner.Controls.Add(this.HousesButtonsSettingsPage);
+            this.HousesPanelTopBanner.Controls.Add(this.panel7);
+            this.HousesPanelTopBanner.Controls.Add(this.HousesLableTitle);
+            this.HousesPanelTopBanner.Location = new System.Drawing.Point(153, 0);
+            this.HousesPanelTopBanner.Name = "HousesPanelTopBanner";
+            this.HousesPanelTopBanner.Size = new System.Drawing.Size(1079, 154);
+            this.HousesPanelTopBanner.TabIndex = 1;
+            // 
+            // HousesButtonsSettingsPage
+            // 
+            this.HousesButtonsSettingsPage.Location = new System.Drawing.Point(933, 10);
+            this.HousesButtonsSettingsPage.Name = "HousesButtonsSettingsPage";
+            this.HousesButtonsSettingsPage.Size = new System.Drawing.Size(140, 140);
+            this.HousesButtonsSettingsPage.TabIndex = 4;
+            this.HousesButtonsSettingsPage.Text = "Settings";
+            this.HousesButtonsSettingsPage.UseVisualStyleBackColor = true;
+            this.HousesButtonsSettingsPage.Click += new System.EventHandler(this.GoToSettiongs);
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(3, 156);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(653, 294);
+            this.panel7.TabIndex = 3;
+            // 
+            // HousesLableTitle
+            // 
+            this.HousesLableTitle.AutoSize = true;
+            this.HousesLableTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HousesLableTitle.Location = new System.Drawing.Point(1, 10);
+            this.HousesLableTitle.Name = "HousesLableTitle";
+            this.HousesLableTitle.Size = new System.Drawing.Size(465, 135);
+            this.HousesLableTitle.TabIndex = 0;
+            this.HousesLableTitle.Text = "Houses";
+            // 
+            // HousesPanelSideBanner
+            // 
+            this.HousesPanelSideBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HousesPanelSideBanner.Controls.Add(this.HousesButtonsReportPage);
+            this.HousesPanelSideBanner.Controls.Add(this.HousesButtonsHousesPage);
+            this.HousesPanelSideBanner.Controls.Add(this.HousesButtonsAppartmentsPage);
+            this.HousesPanelSideBanner.Controls.Add(this.HousesButtonsHomePage);
+            this.HousesPanelSideBanner.Location = new System.Drawing.Point(3, 0);
+            this.HousesPanelSideBanner.Name = "HousesPanelSideBanner";
+            this.HousesPanelSideBanner.Size = new System.Drawing.Size(150, 635);
+            this.HousesPanelSideBanner.TabIndex = 0;
+            // 
+            // HousesButtonsReportPage
+            // 
+            this.HousesButtonsReportPage.Location = new System.Drawing.Point(5, 481);
+            this.HousesButtonsReportPage.Name = "HousesButtonsReportPage";
+            this.HousesButtonsReportPage.Size = new System.Drawing.Size(140, 140);
+            this.HousesButtonsReportPage.TabIndex = 3;
+            this.HousesButtonsReportPage.Text = "Report";
+            this.HousesButtonsReportPage.UseVisualStyleBackColor = true;
+            this.HousesButtonsReportPage.Click += new System.EventHandler(this.GoToReport);
+            // 
+            // HousesButtonsHousesPage
+            // 
+            this.HousesButtonsHousesPage.Location = new System.Drawing.Point(5, 327);
+            this.HousesButtonsHousesPage.Name = "HousesButtonsHousesPage";
+            this.HousesButtonsHousesPage.Size = new System.Drawing.Size(140, 140);
+            this.HousesButtonsHousesPage.TabIndex = 2;
+            this.HousesButtonsHousesPage.Text = "Houses";
+            this.HousesButtonsHousesPage.UseVisualStyleBackColor = true;
+            this.HousesButtonsHousesPage.Click += new System.EventHandler(this.GoToNothing);
+            // 
+            // HousesButtonsAppartmentsPage
+            // 
+            this.HousesButtonsAppartmentsPage.Location = new System.Drawing.Point(5, 164);
+            this.HousesButtonsAppartmentsPage.Name = "HousesButtonsAppartmentsPage";
+            this.HousesButtonsAppartmentsPage.Size = new System.Drawing.Size(140, 140);
+            this.HousesButtonsAppartmentsPage.TabIndex = 1;
+            this.HousesButtonsAppartmentsPage.Text = "Appartments";
+            this.HousesButtonsAppartmentsPage.UseVisualStyleBackColor = true;
+            this.HousesButtonsAppartmentsPage.Click += new System.EventHandler(this.GoToAppartmentsPage);
+            // 
+            // HousesButtonsHomePage
+            // 
+            this.HousesButtonsHomePage.Location = new System.Drawing.Point(5, 10);
+            this.HousesButtonsHomePage.Name = "HousesButtonsHomePage";
+            this.HousesButtonsHomePage.Size = new System.Drawing.Size(140, 140);
+            this.HousesButtonsHomePage.TabIndex = 0;
+            this.HousesButtonsHomePage.Text = "Home";
+            this.HousesButtonsHomePage.UseVisualStyleBackColor = true;
+            this.HousesButtonsHomePage.Click += new System.EventHandler(this.GoToHomePage);
+            // 
+            // AppartmentsPage
+            // 
+            this.AppartmentsPage.Controls.Add(this.AppartmentsPanel);
+            this.AppartmentsPage.Controls.Add(this.AppartmentsPanelTopBanner);
+            this.AppartmentsPage.Controls.Add(this.AppartmentsPanelSideBanner);
+            this.AppartmentsPage.Location = new System.Drawing.Point(4, 22);
+            this.AppartmentsPage.Name = "AppartmentsPage";
+            this.AppartmentsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.AppartmentsPage.Size = new System.Drawing.Size(1232, 631);
+            this.AppartmentsPage.TabIndex = 8;
+            this.AppartmentsPage.Text = "Appartments";
+            this.AppartmentsPage.UseVisualStyleBackColor = true;
+            // 
+            // AppartmentsPanel
+            // 
+            this.AppartmentsPanel.AutoScroll = true;
+            this.AppartmentsPanel.AutoSize = true;
+            this.AppartmentsPanel.Controls.Add(this.plotView3);
+            this.AppartmentsPanel.Controls.Add(this.plotView2);
+            this.AppartmentsPanel.Controls.Add(this.plotView4);
+            this.AppartmentsPanel.Controls.Add(this.plotView1);
+            this.AppartmentsPanel.Location = new System.Drawing.Point(159, 160);
+            this.AppartmentsPanel.Name = "AppartmentsPanel";
+            this.AppartmentsPanel.Size = new System.Drawing.Size(1067, 471);
+            this.AppartmentsPanel.TabIndex = 3;
+            // 
+            // AppartmentsPanelTopBanner
+            // 
+            this.AppartmentsPanelTopBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AppartmentsPanelTopBanner.Controls.Add(this.AppartmentsButtonsSettingsPage);
+            this.AppartmentsPanelTopBanner.Controls.Add(this.panel3);
+            this.AppartmentsPanelTopBanner.Controls.Add(this.AppartmentsLableTitle);
+            this.AppartmentsPanelTopBanner.Location = new System.Drawing.Point(153, 0);
+            this.AppartmentsPanelTopBanner.Name = "AppartmentsPanelTopBanner";
+            this.AppartmentsPanelTopBanner.Size = new System.Drawing.Size(1079, 154);
+            this.AppartmentsPanelTopBanner.TabIndex = 1;
+            // 
+            // AppartmentsButtonsSettingsPage
+            // 
+            this.AppartmentsButtonsSettingsPage.Location = new System.Drawing.Point(933, 10);
+            this.AppartmentsButtonsSettingsPage.Name = "AppartmentsButtonsSettingsPage";
+            this.AppartmentsButtonsSettingsPage.Size = new System.Drawing.Size(140, 140);
+            this.AppartmentsButtonsSettingsPage.TabIndex = 4;
+            this.AppartmentsButtonsSettingsPage.Text = "Settings";
+            this.AppartmentsButtonsSettingsPage.UseVisualStyleBackColor = true;
+            this.AppartmentsButtonsSettingsPage.Click += new System.EventHandler(this.GoToSettiongs);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(3, 156);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(653, 294);
+            this.panel3.TabIndex = 3;
+            // 
+            // AppartmentsLableTitle
+            // 
+            this.AppartmentsLableTitle.AutoSize = true;
+            this.AppartmentsLableTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AppartmentsLableTitle.Location = new System.Drawing.Point(1, 10);
+            this.AppartmentsLableTitle.Name = "AppartmentsLableTitle";
+            this.AppartmentsLableTitle.Size = new System.Drawing.Size(738, 135);
+            this.AppartmentsLableTitle.TabIndex = 0;
+            this.AppartmentsLableTitle.Text = "Appartments";
+            // 
+            // AppartmentsPanelSideBanner
+            // 
+            this.AppartmentsPanelSideBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.AppartmentsPanelSideBanner.Controls.Add(this.AppartmentsButtonsReportPage);
+            this.AppartmentsPanelSideBanner.Controls.Add(this.AppartmentsButtonsHousesPage);
+            this.AppartmentsPanelSideBanner.Controls.Add(this.AppartmentsButtonsAppartmentsPage);
+            this.AppartmentsPanelSideBanner.Controls.Add(this.AppartmentsButtonsHomePage);
+            this.AppartmentsPanelSideBanner.Location = new System.Drawing.Point(3, 0);
+            this.AppartmentsPanelSideBanner.Name = "AppartmentsPanelSideBanner";
+            this.AppartmentsPanelSideBanner.Size = new System.Drawing.Size(150, 635);
+            this.AppartmentsPanelSideBanner.TabIndex = 0;
+            // 
+            // AppartmentsButtonsReportPage
+            // 
+            this.AppartmentsButtonsReportPage.Location = new System.Drawing.Point(5, 481);
+            this.AppartmentsButtonsReportPage.Name = "AppartmentsButtonsReportPage";
+            this.AppartmentsButtonsReportPage.Size = new System.Drawing.Size(140, 140);
+            this.AppartmentsButtonsReportPage.TabIndex = 3;
+            this.AppartmentsButtonsReportPage.Text = "Report";
+            this.AppartmentsButtonsReportPage.UseVisualStyleBackColor = true;
+            this.AppartmentsButtonsReportPage.Click += new System.EventHandler(this.GoToReport);
+            // 
+            // AppartmentsButtonsHousesPage
+            // 
+            this.AppartmentsButtonsHousesPage.Location = new System.Drawing.Point(5, 327);
+            this.AppartmentsButtonsHousesPage.Name = "AppartmentsButtonsHousesPage";
+            this.AppartmentsButtonsHousesPage.Size = new System.Drawing.Size(140, 140);
+            this.AppartmentsButtonsHousesPage.TabIndex = 2;
+            this.AppartmentsButtonsHousesPage.Text = "Houses";
+            this.AppartmentsButtonsHousesPage.UseVisualStyleBackColor = true;
+            this.AppartmentsButtonsHousesPage.Click += new System.EventHandler(this.GoToHouses);
+            // 
+            // AppartmentsButtonsAppartmentsPage
+            // 
+            this.AppartmentsButtonsAppartmentsPage.Location = new System.Drawing.Point(5, 164);
+            this.AppartmentsButtonsAppartmentsPage.Name = "AppartmentsButtonsAppartmentsPage";
+            this.AppartmentsButtonsAppartmentsPage.Size = new System.Drawing.Size(140, 140);
+            this.AppartmentsButtonsAppartmentsPage.TabIndex = 1;
+            this.AppartmentsButtonsAppartmentsPage.Text = "Appartments";
+            this.AppartmentsButtonsAppartmentsPage.UseVisualStyleBackColor = true;
+            this.AppartmentsButtonsAppartmentsPage.Click += new System.EventHandler(this.GoToNothing);
+            // 
+            // AppartmentsButtonsHomePage
+            // 
+            this.AppartmentsButtonsHomePage.Location = new System.Drawing.Point(5, 10);
+            this.AppartmentsButtonsHomePage.Name = "AppartmentsButtonsHomePage";
+            this.AppartmentsButtonsHomePage.Size = new System.Drawing.Size(140, 140);
+            this.AppartmentsButtonsHomePage.TabIndex = 0;
+            this.AppartmentsButtonsHomePage.Text = "Home";
+            this.AppartmentsButtonsHomePage.UseVisualStyleBackColor = true;
+            this.AppartmentsButtonsHomePage.Click += new System.EventHandler(this.GoToHomePage);
             // 
             // HomePageTab
             // 
-            this.HomePageTab.Controls.Add(this.HomePagePanel);
+            this.HomePageTab.Controls.Add(this.HomePagePanel2);
             this.HomePageTab.Controls.Add(this.HomePageTitlePanel);
             this.HomePageTab.Controls.Add(this.HomePageButtonPanel);
             this.HomePageTab.Location = new System.Drawing.Point(4, 22);
             this.HomePageTab.Name = "HomePageTab";
             this.HomePageTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HomePageTab.Size = new System.Drawing.Size(772, 400);
+            this.HomePageTab.Size = new System.Drawing.Size(1232, 631);
             this.HomePageTab.TabIndex = 4;
             this.HomePageTab.Text = "StartMenue";
             this.HomePageTab.UseVisualStyleBackColor = true;
             // 
-            // HomePagePanel
+            // HomePagePanel2
             // 
-            this.HomePagePanel.Location = new System.Drawing.Point(109, 104);
-            this.HomePagePanel.Name = "HomePagePanel";
-            this.HomePagePanel.Size = new System.Drawing.Size(653, 294);
-            this.HomePagePanel.TabIndex = 3;
+            this.HomePagePanel2.Location = new System.Drawing.Point(159, 160);
+            this.HomePagePanel2.Name = "HomePagePanel2";
+            this.HomePagePanel2.Size = new System.Drawing.Size(1067, 471);
+            this.HomePagePanel2.TabIndex = 3;
             // 
             // HomePageTitlePanel
             // 
             this.HomePageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.HomePageTitlePanel.Controls.Add(this.HomePageSettingsButton);
+            this.HomePageTitlePanel.Controls.Add(this.HomePagePanel);
             this.HomePageTitlePanel.Controls.Add(this.HomePageTitleLabel);
-            this.HomePageTitlePanel.Location = new System.Drawing.Point(103, 0);
+            this.HomePageTitlePanel.Location = new System.Drawing.Point(153, 0);
             this.HomePageTitlePanel.Name = "HomePageTitlePanel";
-            this.HomePageTitlePanel.Size = new System.Drawing.Size(665, 100);
+            this.HomePageTitlePanel.Size = new System.Drawing.Size(1079, 154);
             this.HomePageTitlePanel.TabIndex = 1;
+            // 
+            // HomePageSettingsButton
+            // 
+            this.HomePageSettingsButton.Location = new System.Drawing.Point(933, 10);
+            this.HomePageSettingsButton.Name = "HomePageSettingsButton";
+            this.HomePageSettingsButton.Size = new System.Drawing.Size(140, 140);
+            this.HomePageSettingsButton.TabIndex = 4;
+            this.HomePageSettingsButton.Text = "Settings";
+            this.HomePageSettingsButton.UseVisualStyleBackColor = true;
+            this.HomePageSettingsButton.Click += new System.EventHandler(this.GoToSettiongs);
+            // 
+            // HomePagePanel
+            // 
+            this.HomePagePanel.Location = new System.Drawing.Point(3, 156);
+            this.HomePagePanel.Name = "HomePagePanel";
+            this.HomePagePanel.Size = new System.Drawing.Size(653, 294);
+            this.HomePagePanel.TabIndex = 3;
             // 
             // HomePageTitleLabel
             // 
             this.HomePageTitleLabel.AutoSize = true;
-            this.HomePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomePageTitleLabel.Location = new System.Drawing.Point(6, 0);
+            this.HomePageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomePageTitleLabel.Location = new System.Drawing.Point(1, 10);
             this.HomePageTitleLabel.Name = "HomePageTitleLabel";
-            this.HomePageTitleLabel.Size = new System.Drawing.Size(458, 91);
+            this.HomePageTitleLabel.Size = new System.Drawing.Size(691, 135);
             this.HomePageTitleLabel.TabIndex = 0;
             this.HomePageTitleLabel.Text = "Home Page";
             // 
@@ -151,14 +529,14 @@ namespace CIS_129_Final
             this.HomePageButtonPanel.Controls.Add(this.HomePageButtonHome);
             this.HomePageButtonPanel.Location = new System.Drawing.Point(3, 0);
             this.HomePageButtonPanel.Name = "HomePageButtonPanel";
-            this.HomePageButtonPanel.Size = new System.Drawing.Size(100, 400);
+            this.HomePageButtonPanel.Size = new System.Drawing.Size(150, 635);
             this.HomePageButtonPanel.TabIndex = 0;
             // 
             // HomePageButtonReport
             // 
-            this.HomePageButtonReport.Location = new System.Drawing.Point(5, 300);
+            this.HomePageButtonReport.Location = new System.Drawing.Point(5, 481);
             this.HomePageButtonReport.Name = "HomePageButtonReport";
-            this.HomePageButtonReport.Size = new System.Drawing.Size(90, 90);
+            this.HomePageButtonReport.Size = new System.Drawing.Size(140, 140);
             this.HomePageButtonReport.TabIndex = 3;
             this.HomePageButtonReport.Text = "Report";
             this.HomePageButtonReport.UseVisualStyleBackColor = true;
@@ -166,9 +544,9 @@ namespace CIS_129_Final
             // 
             // HomePageButtonHouses
             // 
-            this.HomePageButtonHouses.Location = new System.Drawing.Point(5, 202);
+            this.HomePageButtonHouses.Location = new System.Drawing.Point(5, 327);
             this.HomePageButtonHouses.Name = "HomePageButtonHouses";
-            this.HomePageButtonHouses.Size = new System.Drawing.Size(90, 90);
+            this.HomePageButtonHouses.Size = new System.Drawing.Size(140, 140);
             this.HomePageButtonHouses.TabIndex = 2;
             this.HomePageButtonHouses.Text = "Houses";
             this.HomePageButtonHouses.UseVisualStyleBackColor = true;
@@ -176,9 +554,9 @@ namespace CIS_129_Final
             // 
             // HomePageButtonAppartments
             // 
-            this.HomePageButtonAppartments.Location = new System.Drawing.Point(5, 104);
+            this.HomePageButtonAppartments.Location = new System.Drawing.Point(5, 164);
             this.HomePageButtonAppartments.Name = "HomePageButtonAppartments";
-            this.HomePageButtonAppartments.Size = new System.Drawing.Size(90, 90);
+            this.HomePageButtonAppartments.Size = new System.Drawing.Size(140, 140);
             this.HomePageButtonAppartments.TabIndex = 1;
             this.HomePageButtonAppartments.Text = "Appartments";
             this.HomePageButtonAppartments.UseVisualStyleBackColor = true;
@@ -186,373 +564,281 @@ namespace CIS_129_Final
             // 
             // HomePageButtonHome
             // 
-            this.HomePageButtonHome.Location = new System.Drawing.Point(5, 5);
+            this.HomePageButtonHome.Location = new System.Drawing.Point(5, 10);
             this.HomePageButtonHome.Name = "HomePageButtonHome";
-            this.HomePageButtonHome.Size = new System.Drawing.Size(90, 90);
+            this.HomePageButtonHome.Size = new System.Drawing.Size(140, 140);
             this.HomePageButtonHome.TabIndex = 0;
             this.HomePageButtonHome.Text = "Home";
             this.HomePageButtonHome.UseVisualStyleBackColor = true;
             this.HomePageButtonHome.Click += new System.EventHandler(this.GoToNothing);
             // 
-            // AppartmentsPageTab
+            // MainWindowMaterialTabControler
             // 
-            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPagePanel);
-            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPageTitlePanel);
-            this.AppartmentsPageTab.Controls.Add(this.AppartmentsPageButtonPanel);
-            this.AppartmentsPageTab.Location = new System.Drawing.Point(4, 22);
-            this.AppartmentsPageTab.Name = "AppartmentsPageTab";
-            this.AppartmentsPageTab.Padding = new System.Windows.Forms.Padding(3);
-            this.AppartmentsPageTab.Size = new System.Drawing.Size(772, 400);
-            this.AppartmentsPageTab.TabIndex = 5;
-            this.AppartmentsPageTab.Text = "Appartments";
-            this.AppartmentsPageTab.UseVisualStyleBackColor = true;
+            this.MainWindowMaterialTabControler.Controls.Add(this.HomePageTab);
+            this.MainWindowMaterialTabControler.Controls.Add(this.AppartmentsPage);
+            this.MainWindowMaterialTabControler.Controls.Add(this.HousesPage);
+            this.MainWindowMaterialTabControler.Controls.Add(this.tabPage3);
+            this.MainWindowMaterialTabControler.Controls.Add(this.SettingsPage);
+            this.MainWindowMaterialTabControler.Depth = 0;
+            this.MainWindowMaterialTabControler.Location = new System.Drawing.Point(12, 12);
+            this.MainWindowMaterialTabControler.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MainWindowMaterialTabControler.Multiline = true;
+            this.MainWindowMaterialTabControler.Name = "MainWindowMaterialTabControler";
+            this.MainWindowMaterialTabControler.SelectedIndex = 0;
+            this.MainWindowMaterialTabControler.Size = new System.Drawing.Size(1240, 657);
+            this.MainWindowMaterialTabControler.TabIndex = 2;
             // 
-            // AppartmentsPagePanel
+            // SettingsPage
             // 
-            this.AppartmentsPagePanel.Location = new System.Drawing.Point(109, 106);
-            this.AppartmentsPagePanel.Name = "AppartmentsPagePanel";
-            this.AppartmentsPagePanel.Size = new System.Drawing.Size(653, 294);
-            this.AppartmentsPagePanel.TabIndex = 2;
+            this.SettingsPage.Controls.Add(this.SettingsPanel);
+            this.SettingsPage.Controls.Add(this.SettingsPanelTopBanner);
+            this.SettingsPage.Controls.Add(this.SettingsPanelSideBanner);
+            this.SettingsPage.Location = new System.Drawing.Point(4, 22);
+            this.SettingsPage.Name = "SettingsPage";
+            this.SettingsPage.Padding = new System.Windows.Forms.Padding(3);
+            this.SettingsPage.Size = new System.Drawing.Size(1232, 631);
+            this.SettingsPage.TabIndex = 11;
+            this.SettingsPage.Text = "Settings";
+            this.SettingsPage.UseVisualStyleBackColor = true;
             // 
-            // AppartmentsPageTitlePanel
+            // SettingsPanel
             // 
-            this.AppartmentsPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsPageTitlePanel.Controls.Add(this.AppartmentsPageTitleLabel);
-            this.AppartmentsPageTitlePanel.Location = new System.Drawing.Point(103, 0);
-            this.AppartmentsPageTitlePanel.Name = "AppartmentsPageTitlePanel";
-            this.AppartmentsPageTitlePanel.Size = new System.Drawing.Size(665, 100);
-            this.AppartmentsPageTitlePanel.TabIndex = 1;
+            this.SettingsPanel.Location = new System.Drawing.Point(156, 159);
+            this.SettingsPanel.Name = "SettingsPanel";
+            this.SettingsPanel.Size = new System.Drawing.Size(1067, 471);
+            this.SettingsPanel.TabIndex = 4;
             // 
-            // AppartmentsPageTitleLabel
+            // SettingsPanelTopBanner
             // 
-            this.AppartmentsPageTitleLabel.AutoSize = true;
-            this.AppartmentsPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppartmentsPageTitleLabel.Location = new System.Drawing.Point(6, 0);
-            this.AppartmentsPageTitleLabel.Name = "AppartmentsPageTitleLabel";
-            this.AppartmentsPageTitleLabel.Size = new System.Drawing.Size(490, 91);
-            this.AppartmentsPageTitleLabel.TabIndex = 0;
-            this.AppartmentsPageTitleLabel.Text = "Appartments";
+            this.SettingsPanelTopBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SettingsPanelTopBanner.Controls.Add(this.panel2);
+            this.SettingsPanelTopBanner.Controls.Add(this.SettingsLabelTitle);
+            this.SettingsPanelTopBanner.Location = new System.Drawing.Point(153, 0);
+            this.SettingsPanelTopBanner.Name = "SettingsPanelTopBanner";
+            this.SettingsPanelTopBanner.Size = new System.Drawing.Size(1079, 154);
+            this.SettingsPanelTopBanner.TabIndex = 1;
             // 
-            // AppartmentsPageButtonPanel
+            // panel2
             // 
-            this.AppartmentsPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonReport);
-            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonHouses);
-            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonAppartments);
-            this.AppartmentsPageButtonPanel.Controls.Add(this.AppartmentsPageButtonHome);
-            this.AppartmentsPageButtonPanel.Location = new System.Drawing.Point(3, 0);
-            this.AppartmentsPageButtonPanel.Name = "AppartmentsPageButtonPanel";
-            this.AppartmentsPageButtonPanel.Size = new System.Drawing.Size(100, 400);
-            this.AppartmentsPageButtonPanel.TabIndex = 0;
+            this.panel2.Location = new System.Drawing.Point(3, 156);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(653, 294);
+            this.panel2.TabIndex = 3;
             // 
-            // AppartmentsPageButtonReport
+            // SettingsLabelTitle
             // 
-            this.AppartmentsPageButtonReport.Location = new System.Drawing.Point(5, 300);
-            this.AppartmentsPageButtonReport.Name = "AppartmentsPageButtonReport";
-            this.AppartmentsPageButtonReport.Size = new System.Drawing.Size(90, 90);
-            this.AppartmentsPageButtonReport.TabIndex = 3;
-            this.AppartmentsPageButtonReport.Text = "Report";
-            this.AppartmentsPageButtonReport.UseVisualStyleBackColor = true;
-            this.AppartmentsPageButtonReport.Click += new System.EventHandler(this.GoToReport);
+            this.SettingsLabelTitle.AutoSize = true;
+            this.SettingsLabelTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 90F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsLabelTitle.Location = new System.Drawing.Point(1, 10);
+            this.SettingsLabelTitle.Name = "SettingsLabelTitle";
+            this.SettingsLabelTitle.Size = new System.Drawing.Size(491, 135);
+            this.SettingsLabelTitle.TabIndex = 0;
+            this.SettingsLabelTitle.Text = "Settings";
             // 
-            // AppartmentsPageButtonHouses
+            // SettingsPanelSideBanner
             // 
-            this.AppartmentsPageButtonHouses.Location = new System.Drawing.Point(5, 202);
-            this.AppartmentsPageButtonHouses.Name = "AppartmentsPageButtonHouses";
-            this.AppartmentsPageButtonHouses.Size = new System.Drawing.Size(90, 90);
-            this.AppartmentsPageButtonHouses.TabIndex = 2;
-            this.AppartmentsPageButtonHouses.Text = "Houses";
-            this.AppartmentsPageButtonHouses.UseVisualStyleBackColor = true;
-            this.AppartmentsPageButtonHouses.Click += new System.EventHandler(this.GoToHouses);
+            this.SettingsPanelSideBanner.BackColor = System.Drawing.Color.RoyalBlue;
+            this.SettingsPanelSideBanner.Controls.Add(this.SettingsButtonReportPage);
+            this.SettingsPanelSideBanner.Controls.Add(this.SettingsButtonHousesPage);
+            this.SettingsPanelSideBanner.Controls.Add(this.SettingsButtonAppartmentsPage);
+            this.SettingsPanelSideBanner.Controls.Add(this.SettingsButtonHomePage);
+            this.SettingsPanelSideBanner.Location = new System.Drawing.Point(3, 0);
+            this.SettingsPanelSideBanner.Name = "SettingsPanelSideBanner";
+            this.SettingsPanelSideBanner.Size = new System.Drawing.Size(150, 635);
+            this.SettingsPanelSideBanner.TabIndex = 0;
             // 
-            // AppartmentsPageButtonAppartments
+            // SettingsButtonReportPage
             // 
-            this.AppartmentsPageButtonAppartments.Location = new System.Drawing.Point(5, 104);
-            this.AppartmentsPageButtonAppartments.Name = "AppartmentsPageButtonAppartments";
-            this.AppartmentsPageButtonAppartments.Size = new System.Drawing.Size(90, 90);
-            this.AppartmentsPageButtonAppartments.TabIndex = 1;
-            this.AppartmentsPageButtonAppartments.Text = "Appartments";
-            this.AppartmentsPageButtonAppartments.UseVisualStyleBackColor = true;
-            this.AppartmentsPageButtonAppartments.Click += new System.EventHandler(this.GoToNothing);
+            this.SettingsButtonReportPage.Location = new System.Drawing.Point(5, 481);
+            this.SettingsButtonReportPage.Name = "SettingsButtonReportPage";
+            this.SettingsButtonReportPage.Size = new System.Drawing.Size(140, 140);
+            this.SettingsButtonReportPage.TabIndex = 3;
+            this.SettingsButtonReportPage.Text = "Report";
+            this.SettingsButtonReportPage.UseVisualStyleBackColor = true;
+            this.SettingsButtonReportPage.Click += new System.EventHandler(this.GoToReport);
             // 
-            // AppartmentsPageButtonHome
+            // SettingsButtonHousesPage
             // 
-            this.AppartmentsPageButtonHome.Location = new System.Drawing.Point(5, 5);
-            this.AppartmentsPageButtonHome.Name = "AppartmentsPageButtonHome";
-            this.AppartmentsPageButtonHome.Size = new System.Drawing.Size(90, 90);
-            this.AppartmentsPageButtonHome.TabIndex = 0;
-            this.AppartmentsPageButtonHome.Text = "Home";
-            this.AppartmentsPageButtonHome.UseVisualStyleBackColor = true;
-            this.AppartmentsPageButtonHome.Click += new System.EventHandler(this.GoToHomePage);
+            this.SettingsButtonHousesPage.Location = new System.Drawing.Point(5, 327);
+            this.SettingsButtonHousesPage.Name = "SettingsButtonHousesPage";
+            this.SettingsButtonHousesPage.Size = new System.Drawing.Size(140, 140);
+            this.SettingsButtonHousesPage.TabIndex = 2;
+            this.SettingsButtonHousesPage.Text = "Houses";
+            this.SettingsButtonHousesPage.UseVisualStyleBackColor = true;
+            this.SettingsButtonHousesPage.Click += new System.EventHandler(this.GoToHouses);
             // 
-            // HousesPageTab
+            // SettingsButtonAppartmentsPage
             // 
-            this.HousesPageTab.Controls.Add(this.HousesPagePanel);
-            this.HousesPageTab.Controls.Add(this.HousesPageTitlePanel);
-            this.HousesPageTab.Controls.Add(this.HousesPageButtonPanel);
-            this.HousesPageTab.Location = new System.Drawing.Point(4, 22);
-            this.HousesPageTab.Name = "HousesPageTab";
-            this.HousesPageTab.Padding = new System.Windows.Forms.Padding(3);
-            this.HousesPageTab.Size = new System.Drawing.Size(772, 400);
-            this.HousesPageTab.TabIndex = 6;
-            this.HousesPageTab.Text = "Houses";
-            this.HousesPageTab.UseVisualStyleBackColor = true;
+            this.SettingsButtonAppartmentsPage.Location = new System.Drawing.Point(5, 164);
+            this.SettingsButtonAppartmentsPage.Name = "SettingsButtonAppartmentsPage";
+            this.SettingsButtonAppartmentsPage.Size = new System.Drawing.Size(140, 140);
+            this.SettingsButtonAppartmentsPage.TabIndex = 1;
+            this.SettingsButtonAppartmentsPage.Text = "Appartments";
+            this.SettingsButtonAppartmentsPage.UseVisualStyleBackColor = true;
+            this.SettingsButtonAppartmentsPage.Click += new System.EventHandler(this.GoToAppartmentsPage);
             // 
-            // HousesPagePanel
+            // SettingsButtonHomePage
             // 
-            this.HousesPagePanel.Location = new System.Drawing.Point(109, 106);
-            this.HousesPagePanel.Name = "HousesPagePanel";
-            this.HousesPagePanel.Size = new System.Drawing.Size(653, 294);
-            this.HousesPagePanel.TabIndex = 2;
+            this.SettingsButtonHomePage.Location = new System.Drawing.Point(5, 10);
+            this.SettingsButtonHomePage.Name = "SettingsButtonHomePage";
+            this.SettingsButtonHomePage.Size = new System.Drawing.Size(140, 140);
+            this.SettingsButtonHomePage.TabIndex = 0;
+            this.SettingsButtonHomePage.Text = "Home";
+            this.SettingsButtonHomePage.UseVisualStyleBackColor = true;
+            this.SettingsButtonHomePage.Click += new System.EventHandler(this.GoToHomePage);
             // 
-            // HousesPageTitlePanel
+            // plotView1
             // 
-            this.HousesPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HousesPageTitlePanel.Controls.Add(this.HousesPageTitleLabel);
-            this.HousesPageTitlePanel.Location = new System.Drawing.Point(103, 0);
-            this.HousesPageTitlePanel.Name = "HousesPageTitlePanel";
-            this.HousesPageTitlePanel.Size = new System.Drawing.Size(665, 100);
-            this.HousesPageTitlePanel.TabIndex = 1;
+            this.plotView1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.plotView1.Location = new System.Drawing.Point(447, 4);
+            this.plotView1.Name = "plotView1";
+            this.plotView1.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView1.Size = new System.Drawing.Size(617, 255);
+            this.plotView1.TabIndex = 0;
+            this.plotView1.Text = "MainPlotView";
+            this.plotView1.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView1.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView1.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // HousesPageTitleLabel
+            // plotView4
             // 
-            this.HousesPageTitleLabel.AutoSize = true;
-            this.HousesPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HousesPageTitleLabel.Location = new System.Drawing.Point(6, 0);
-            this.HousesPageTitleLabel.Name = "HousesPageTitleLabel";
-            this.HousesPageTitleLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.HousesPageTitleLabel.Size = new System.Drawing.Size(309, 91);
-            this.HousesPageTitleLabel.TabIndex = 0;
-            this.HousesPageTitleLabel.Text = "Houses";
+            this.plotView4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.plotView4.Location = new System.Drawing.Point(864, 265);
+            this.plotView4.Name = "plotView4";
+            this.plotView4.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView4.Size = new System.Drawing.Size(200, 200);
+            this.plotView4.TabIndex = 3;
+            this.plotView4.Text = "PieThreePlotView";
+            this.plotView4.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView4.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView4.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // HousesPageButtonPanel
+            // plotView2
             // 
-            this.HousesPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonReport);
-            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonHouses);
-            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonAppartments);
-            this.HousesPageButtonPanel.Controls.Add(this.HousesPageButtonHome);
-            this.HousesPageButtonPanel.Location = new System.Drawing.Point(3, 0);
-            this.HousesPageButtonPanel.Name = "HousesPageButtonPanel";
-            this.HousesPageButtonPanel.Size = new System.Drawing.Size(100, 400);
-            this.HousesPageButtonPanel.TabIndex = 0;
+            this.plotView2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.plotView2.Location = new System.Drawing.Point(656, 265);
+            this.plotView2.Name = "plotView2";
+            this.plotView2.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView2.Size = new System.Drawing.Size(200, 200);
+            this.plotView2.TabIndex = 4;
+            this.plotView2.Text = "PieTwoPlotView";
+            this.plotView2.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView2.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView2.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
-            // HousesPageButtonReport
+            // plotView3
             // 
-            this.HousesPageButtonReport.Location = new System.Drawing.Point(5, 300);
-            this.HousesPageButtonReport.Name = "HousesPageButtonReport";
-            this.HousesPageButtonReport.Size = new System.Drawing.Size(90, 90);
-            this.HousesPageButtonReport.TabIndex = 3;
-            this.HousesPageButtonReport.Text = "Report";
-            this.HousesPageButtonReport.UseVisualStyleBackColor = true;
-            this.HousesPageButtonReport.Click += new System.EventHandler(this.GoToReport);
-            // 
-            // HousesPageButtonHouses
-            // 
-            this.HousesPageButtonHouses.Location = new System.Drawing.Point(5, 202);
-            this.HousesPageButtonHouses.Name = "HousesPageButtonHouses";
-            this.HousesPageButtonHouses.Size = new System.Drawing.Size(90, 90);
-            this.HousesPageButtonHouses.TabIndex = 2;
-            this.HousesPageButtonHouses.Text = "Houses";
-            this.HousesPageButtonHouses.UseVisualStyleBackColor = true;
-            this.HousesPageButtonHouses.Click += new System.EventHandler(this.GoToNothing);
-            // 
-            // HousesPageButtonAppartments
-            // 
-            this.HousesPageButtonAppartments.Location = new System.Drawing.Point(5, 104);
-            this.HousesPageButtonAppartments.Name = "HousesPageButtonAppartments";
-            this.HousesPageButtonAppartments.Size = new System.Drawing.Size(90, 90);
-            this.HousesPageButtonAppartments.TabIndex = 1;
-            this.HousesPageButtonAppartments.Text = "Appartments";
-            this.HousesPageButtonAppartments.UseVisualStyleBackColor = true;
-            this.HousesPageButtonAppartments.Click += new System.EventHandler(this.GoToAppartmentsPage);
-            // 
-            // HousesPageButtonHome
-            // 
-            this.HousesPageButtonHome.Location = new System.Drawing.Point(5, 5);
-            this.HousesPageButtonHome.Name = "HousesPageButtonHome";
-            this.HousesPageButtonHome.Size = new System.Drawing.Size(90, 90);
-            this.HousesPageButtonHome.TabIndex = 0;
-            this.HousesPageButtonHome.Text = "Home";
-            this.HousesPageButtonHome.UseVisualStyleBackColor = true;
-            this.HousesPageButtonHome.Click += new System.EventHandler(this.GoToHomePage);
-            // 
-            // ReportPageTab
-            // 
-            this.ReportPageTab.Controls.Add(this.ReportViewer);
-            this.ReportPageTab.Controls.Add(this.ReportPageTitlePanel);
-            this.ReportPageTab.Controls.Add(this.ReportPageButtonPanel);
-            this.ReportPageTab.Location = new System.Drawing.Point(4, 22);
-            this.ReportPageTab.Name = "ReportPageTab";
-            this.ReportPageTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ReportPageTab.Size = new System.Drawing.Size(772, 400);
-            this.ReportPageTab.TabIndex = 7;
-            this.ReportPageTab.Text = "Report";
-            this.ReportPageTab.UseVisualStyleBackColor = true;
-            // 
-            // ReportViewer
-            // 
-            this.ReportViewer.LocalReport.ReportEmbeddedResource = "CIS_129_Final.FullReport.rdlc";
-            this.ReportViewer.Location = new System.Drawing.Point(103, 101);
-            this.ReportViewer.Name = "ReportViewer";
-            this.ReportViewer.ServerReport.BearerToken = null;
-            this.ReportViewer.Size = new System.Drawing.Size(665, 299);
-            this.ReportViewer.TabIndex = 2;
-            // 
-            // ReportPageTitlePanel
-            // 
-            this.ReportPageTitlePanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ReportPageTitlePanel.Controls.Add(this.ReportPageTitleLabel);
-            this.ReportPageTitlePanel.Location = new System.Drawing.Point(103, 0);
-            this.ReportPageTitlePanel.Name = "ReportPageTitlePanel";
-            this.ReportPageTitlePanel.Size = new System.Drawing.Size(665, 100);
-            this.ReportPageTitlePanel.TabIndex = 1;
-            // 
-            // ReportPageTitleLabel
-            // 
-            this.ReportPageTitleLabel.AutoSize = true;
-            this.ReportPageTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportPageTitleLabel.Location = new System.Drawing.Point(6, 0);
-            this.ReportPageTitleLabel.Name = "ReportPageTitleLabel";
-            this.ReportPageTitleLabel.Size = new System.Drawing.Size(278, 91);
-            this.ReportPageTitleLabel.TabIndex = 0;
-            this.ReportPageTitleLabel.Text = "Report";
-            // 
-            // ReportPageButtonPanel
-            // 
-            this.ReportPageButtonPanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonReport);
-            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonHouses);
-            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonAppartments);
-            this.ReportPageButtonPanel.Controls.Add(this.ReportPageButtonHome);
-            this.ReportPageButtonPanel.Location = new System.Drawing.Point(3, 0);
-            this.ReportPageButtonPanel.Name = "ReportPageButtonPanel";
-            this.ReportPageButtonPanel.Size = new System.Drawing.Size(100, 400);
-            this.ReportPageButtonPanel.TabIndex = 0;
-            // 
-            // ReportPageButtonReport
-            // 
-            this.ReportPageButtonReport.Location = new System.Drawing.Point(5, 300);
-            this.ReportPageButtonReport.Name = "ReportPageButtonReport";
-            this.ReportPageButtonReport.Size = new System.Drawing.Size(90, 90);
-            this.ReportPageButtonReport.TabIndex = 3;
-            this.ReportPageButtonReport.Text = "Report";
-            this.ReportPageButtonReport.UseVisualStyleBackColor = true;
-            this.ReportPageButtonReport.Click += new System.EventHandler(this.GoToNothing);
-            // 
-            // ReportPageButtonHouses
-            // 
-            this.ReportPageButtonHouses.Location = new System.Drawing.Point(5, 202);
-            this.ReportPageButtonHouses.Name = "ReportPageButtonHouses";
-            this.ReportPageButtonHouses.Size = new System.Drawing.Size(90, 90);
-            this.ReportPageButtonHouses.TabIndex = 2;
-            this.ReportPageButtonHouses.Text = "Houses";
-            this.ReportPageButtonHouses.UseVisualStyleBackColor = true;
-            this.ReportPageButtonHouses.Click += new System.EventHandler(this.GoToHouses);
-            // 
-            // ReportPageButtonAppartments
-            // 
-            this.ReportPageButtonAppartments.Location = new System.Drawing.Point(5, 104);
-            this.ReportPageButtonAppartments.Name = "ReportPageButtonAppartments";
-            this.ReportPageButtonAppartments.Size = new System.Drawing.Size(90, 90);
-            this.ReportPageButtonAppartments.TabIndex = 1;
-            this.ReportPageButtonAppartments.Text = "Appartments";
-            this.ReportPageButtonAppartments.UseVisualStyleBackColor = true;
-            this.ReportPageButtonAppartments.Click += new System.EventHandler(this.GoToAppartmentsPage);
-            // 
-            // ReportPageButtonHome
-            // 
-            this.ReportPageButtonHome.Location = new System.Drawing.Point(5, 5);
-            this.ReportPageButtonHome.Name = "ReportPageButtonHome";
-            this.ReportPageButtonHome.Size = new System.Drawing.Size(90, 90);
-            this.ReportPageButtonHome.TabIndex = 0;
-            this.ReportPageButtonHome.Text = "Home";
-            this.ReportPageButtonHome.UseVisualStyleBackColor = true;
-            this.ReportPageButtonHome.Click += new System.EventHandler(this.GoToHomePage);
-            // 
-            // appartmentDatabaseDataSetBindingSource
-            // 
-            this.appartmentDatabaseDataSetBindingSource.DataMember = "Table";
-            this.appartmentDatabaseDataSetBindingSource.DataSource = this.dataSet;
-            // 
-            // dataSet
-            // 
-            this.dataSet.DataSetName = "DataSet1";
-            this.dataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.plotView3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.plotView3.Location = new System.Drawing.Point(447, 265);
+            this.plotView3.Name = "plotView3";
+            this.plotView3.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView3.Size = new System.Drawing.Size(200, 200);
+            this.plotView3.TabIndex = 5;
+            this.plotView3.Text = "PieOnePlotView";
+            this.plotView3.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView3.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView3.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 443);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.MainWindowMaterialTabControler);
             this.Name = "MainWindow";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.MainWindow_Load);
-            this.MainWindowMaterialTabControler.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.ReportPanelTopBanner.ResumeLayout(false);
+            this.ReportPanelTopBanner.PerformLayout();
+            this.ReportPanelSideBanner.ResumeLayout(false);
+            this.HousesPage.ResumeLayout(false);
+            this.HousesPanelTopBanner.ResumeLayout(false);
+            this.HousesPanelTopBanner.PerformLayout();
+            this.HousesPanelSideBanner.ResumeLayout(false);
+            this.AppartmentsPage.ResumeLayout(false);
+            this.AppartmentsPage.PerformLayout();
+            this.AppartmentsPanel.ResumeLayout(false);
+            this.AppartmentsPanelTopBanner.ResumeLayout(false);
+            this.AppartmentsPanelTopBanner.PerformLayout();
+            this.AppartmentsPanelSideBanner.ResumeLayout(false);
             this.HomePageTab.ResumeLayout(false);
             this.HomePageTitlePanel.ResumeLayout(false);
             this.HomePageTitlePanel.PerformLayout();
             this.HomePageButtonPanel.ResumeLayout(false);
-            this.AppartmentsPageTab.ResumeLayout(false);
-            this.AppartmentsPageTitlePanel.ResumeLayout(false);
-            this.AppartmentsPageTitlePanel.PerformLayout();
-            this.AppartmentsPageButtonPanel.ResumeLayout(false);
-            this.HousesPageTab.ResumeLayout(false);
-            this.HousesPageTitlePanel.ResumeLayout(false);
-            this.HousesPageTitlePanel.PerformLayout();
-            this.HousesPageButtonPanel.ResumeLayout(false);
-            this.ReportPageTab.ResumeLayout(false);
-            this.ReportPageTitlePanel.ResumeLayout(false);
-            this.ReportPageTitlePanel.PerformLayout();
-            this.ReportPageButtonPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
+            this.MainWindowMaterialTabControler.ResumeLayout(false);
+            this.SettingsPage.ResumeLayout(false);
+            this.SettingsPanelTopBanner.ResumeLayout(false);
+            this.SettingsPanelTopBanner.PerformLayout();
+            this.SettingsPanelSideBanner.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialTabControl MainWindowMaterialTabControler;
+        
+        private System.Windows.Forms.BindingSource appartmentDatabaseDataSetBindingSource;
+        private DataSet1 dataSet;
+        private TabPage tabPage3;
+        private Microsoft.Reporting.WinForms.ReportViewer ReportViewer;
+        private Panel ReportPanelTopBanner;
+        private Button ReportButtonSettings;
+        private Panel panel11;
+        private Label ReportLablaTitle;
+        private Panel ReportPanelSideBanner;
+        private Button ReportButtonReportPage;
+        private Button ReportButtonHousesPage;
+        private Button ReportButtonAppartmentsPage;
+        private Button ReportButtonHomePage;
+        private TabPage HousesPage;
+        private Panel HousesPanel;
+        private Panel HousesPanelTopBanner;
+        private Button HousesButtonsSettingsPage;
+        private Panel panel7;
+        private Label HousesLableTitle;
+        private Panel HousesPanelSideBanner;
+        private Button HousesButtonsReportPage;
+        private Button HousesButtonsHousesPage;
+        private Button HousesButtonsAppartmentsPage;
+        private Button HousesButtonsHomePage;
+        private TabPage AppartmentsPage;
+        private Panel AppartmentsPanel;
+        private Panel AppartmentsPanelTopBanner;
+        private Button AppartmentsButtonsSettingsPage;
+        private Panel panel3;
+        private Label AppartmentsLableTitle;
+        private Panel AppartmentsPanelSideBanner;
+        private Button AppartmentsButtonsReportPage;
+        private Button AppartmentsButtonsHousesPage;
+        private Button AppartmentsButtonsAppartmentsPage;
+        private Button AppartmentsButtonsHomePage;
         private TabPage HomePageTab;
+        private Panel HomePagePanel2;
         private Panel HomePageTitlePanel;
+        private Button HomePageSettingsButton;
+        private Panel HomePagePanel;
         private Label HomePageTitleLabel;
         private Panel HomePageButtonPanel;
         private Button HomePageButtonReport;
         private Button HomePageButtonHouses;
         private Button HomePageButtonAppartments;
         private Button HomePageButtonHome;
-        private TabPage AppartmentsPageTab;
-        private Panel AppartmentsPagePanel;
-        private Panel AppartmentsPageTitlePanel;
-        private Label AppartmentsPageTitleLabel;
-        private Panel AppartmentsPageButtonPanel;
-        private TabPage HousesPageTab;
-        private Panel HousesPagePanel;
-        private Panel HousesPageTitlePanel;
-        private Label HousesPageTitleLabel;
-        private Panel HousesPageButtonPanel;
-        private Button HousesPageButtonReport;
-        private Button HousesPageButtonHouses;
-        private Button HousesPageButtonAppartments;
-        private Button HousesPageButtonHome;
-        private TabPage ReportPageTab;
-        private Panel ReportPageTitlePanel;
-        private Label ReportPageTitleLabel;
-        private Panel ReportPageButtonPanel;
-        private Button ReportPageButtonReport;
-        private Button ReportPageButtonHouses;
-        private Button ReportPageButtonAppartments;
-        private Button ReportPageButtonHome;
-        private Button AppartmentsPageButtonReport;
-        private Button AppartmentsPageButtonHouses;
-        private Button AppartmentsPageButtonAppartments;
-        private Button AppartmentsPageButtonHome;
-        private Microsoft.Reporting.WinForms.ReportViewer ReportViewer;
-        
-        private System.Windows.Forms.BindingSource appartmentDatabaseDataSetBindingSource;
-        private DataSet1 dataSet;
-        private Panel HomePagePanel;
+        private MaterialSkin.Controls.MaterialTabControl MainWindowMaterialTabControler;
+        private TabPage SettingsPage;
+        private Panel SettingsPanelTopBanner;
+        private Panel panel2;
+        private Label SettingsLabelTitle;
+        private Panel SettingsPanelSideBanner;
+        private Button SettingsButtonReportPage;
+        private Button SettingsButtonHousesPage;
+        private Button SettingsButtonAppartmentsPage;
+        private Button SettingsButtonHomePage;
+        private Panel SettingsPanel;
+        private OxyPlot.WindowsForms.PlotView plotView1;
+        private OxyPlot.WindowsForms.PlotView plotView3;
+        private OxyPlot.WindowsForms.PlotView plotView2;
+        private OxyPlot.WindowsForms.PlotView plotView4;
     }
 }
 

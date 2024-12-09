@@ -56,16 +56,6 @@ C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\pt\Microsoft.ReportViewer.Wi
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
-C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.MainWindow.resources
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.dll
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.WinForms.dll
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.Wpf.dll
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.pdb
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.xml
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.WinForms.pdb
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.WinForms.xml
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.Wpf.pdb
-C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\AppartmentDatabase.mdf
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\AppartmentDatabase_log.ldf
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\x86\SqlServerSpatial160.dll
@@ -80,3 +70,8 @@ C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\pt\Microsoft.SqlServer.Types
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\OxyPlot.dll
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\OxyPlot.WindowsForms.dll
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\OxyPlot.xml
+C:\Users\dexma\source\repos\CIS_129_Final\bin\Debug\OxyPlot.WindowsForms.xml
+C:\Users\dexma\source\repos\CIS_129_Final\obj\Debug\CIS_129_Final.MainWindow.resources

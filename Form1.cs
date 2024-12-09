@@ -1,10 +1,19 @@
 ﻿using Microsoft.Reporting.WinForms;
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Net.PeerToPeer.Collaboration;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,13 +24,25 @@ namespace CIS_129_Final
     {
         public MainWindow()
         {
-            //SqlServerTypes.Utilities.LoadNativeAssemblies(AppDomain.CurrentDomain.BaseDirectory);
+            Random random = new Random(0);
+
+            TEMP_AppartmentsPowerConsumption APT = new TEMP_AppartmentsPowerConsumption();
+
             InitializeComponent();
 
+            dataSet = APT.TEMP_AppartmentsPowerConsumptionDataToDataSet(dataSet);
+
+            InsertDataToReportViewer(this.ReportViewer, dataSet.Table1);
+
+            this.plotView1.Model = APT.AppartmentsPowerConsumptionLineGraph(dataSet);
+            this.plotView2.Model = APT.AppartmentsPowerConsumptionPieGraph(dataSet, 1);
+            this.plotView3.Model = APT.AppartmentsPowerConsumptionPieGraph(dataSet, 2);
+            this.plotView4.Model = APT.AppartmentsPowerConsumptionPieGraph(dataSet, 3);
         }
 
         //Home Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        private void GoToHomePage(object sender, EventArgs e) {
+        private void GoToHomePage(object sender, EventArgs e)
+        {
             this.MainWindowMaterialTabControler.SelectTab(0);
         }
         //Home Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +73,16 @@ namespace CIS_129_Final
             this.MainWindowMaterialTabControler.SelectTab(3);
         }
         //Report Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        
+
+
+
+        //Settings Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        private void GoToSettiongs(object sender, EventArgs e)
+        {
+            this.MainWindowMaterialTabControler.SelectTab(4);
+        }
+        //Settings Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 
         //NULL Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -65,7 +95,7 @@ namespace CIS_129_Final
         //NULL Buttons~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-        
+        //this function places data into the report viewer, it is temporary unless never fully made.
         void InsertDataToReportViewer(ReportViewer REPORTVIEWER, DataTable DATA)
         {
             Microsoft.Reporting.WinForms.ReportDataSource DataSourceInto = new Microsoft.Reporting.WinForms.ReportDataSource();
@@ -77,10 +107,6 @@ namespace CIS_129_Final
 
             REPORTVIEWER.RefreshReport();
         }
-
-        private void MainWindow_Load(object sender, EventArgs e)
-        {
-            this.ReportViewer.RefreshReport();
-        }
+        //this function places data into the report viewer, it is temporary unless never fully made.
     }
 }
