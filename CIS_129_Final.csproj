@@ -113,6 +113,11 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TEMP_Class1.cs" />
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -136,13 +141,9 @@
     <EmbeddedResource Include="FullReport.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -193,6 +194,11 @@
     <Content Include="ProgramPowerData\APT\AptSquairFoodData.txt" />
     <Content Include="ProgramPowerData\APT\HasWrittenSizeData.txt" />
     <Content Include="ProgramPowerData\APT\HasWrittenPowerData.txt" />
+    <None Include="Resources\Report_Icon.png" />
+    <None Include="Resources\300X_Home.png" />
+    <None Include="Resources\300X_House.png" />
+    <None Include="Resources\300X_Settings.png" />
+    <None Include="Resources\300X_Appartment.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\DataSources\" />
