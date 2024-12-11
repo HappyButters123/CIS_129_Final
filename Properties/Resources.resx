@@ -118,19 +118,34 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="300X_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\300X_Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Report_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Report_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="300X_House" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\300X_House.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="House_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighContrast\House_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="300X_Appartment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\300X_Appartment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighContrast\Settings_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="300X_Home" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\300X_Home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Appartment_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighContrast\Appartment_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="300X_House" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\300X_House.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="300X_Settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\300X_Settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Report_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Report_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Home_Icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighContrast\Home_Icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Report_Icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HighContrast\Report_Icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

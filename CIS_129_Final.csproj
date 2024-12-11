@@ -194,6 +194,11 @@
     <Content Include="ProgramPowerData\APT\AptSquairFoodData.txt" />
     <Content Include="ProgramPowerData\APT\HasWrittenSizeData.txt" />
     <Content Include="ProgramPowerData\APT\HasWrittenPowerData.txt" />
+    <None Include="Resources\HighContrast\Report_Icon1.png" />
+    <None Include="Resources\HighContrast\House_Icon.png" />
+    <None Include="Resources\HighContrast\Home_Icon.png" />
+    <None Include="Resources\HighContrast\Appartment_Icon.png" />
+    <None Include="Resources\HighContrast\Settings_icon.png" />
     <None Include="Resources\Report_Icon.png" />
     <None Include="Resources\300X_Home.png" />
     <None Include="Resources\300X_House.png" />

@@ -95,15 +95,29 @@ namespace CIS_129_Final
             this.MainWindowMaterialTabControler = new MaterialSkin.Controls.MaterialTabControl();
             this.SettingsPage = new System.Windows.Forms.TabPage();
             this.SettingsPanel = new System.Windows.Forms.Panel();
-            this.MenueColorInfoLabel = new System.Windows.Forms.Label();
+            this.ConfermTheamButton = new System.Windows.Forms.Button();
+            this.MenueTextColorCodeDisplay = new System.Windows.Forms.Label();
+            this.WindowTextColorCodeDisplay = new System.Windows.Forms.Label();
             this.MenueColorConfermButton = new System.Windows.Forms.Button();
+            this.WindowColorConfermButton = new System.Windows.Forms.Button();
+            this.MenueTextColorInfoLabel = new System.Windows.Forms.Label();
+            this.WindowTextColorInfoLabel = new System.Windows.Forms.Label();
+            this.MenueTextColorPreviewPanel = new System.Windows.Forms.Panel();
+            this.MenueTextBlueMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.WindowTextColorPreviewPanel = new System.Windows.Forms.Panel();
+            this.MenueTextGreenMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.WindowTextBlueMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.MenueTextRedMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.WindowTextGreenMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.WindowTextRedMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
+            this.ColorTheamComboBox = new System.Windows.Forms.ComboBox();
+            this.MenueColorInfoLabel = new System.Windows.Forms.Label();
             this.MenueColorCodeDisplay = new System.Windows.Forms.Label();
             this.MenueBlueMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
             this.MenueGreenMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
             this.MenueRedMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
             this.MenueColorPreviewPanel = new System.Windows.Forms.Panel();
             this.WindowColorInfoLabel = new System.Windows.Forms.Label();
-            this.WindowColorConfermButton = new System.Windows.Forms.Button();
             this.WindowColorCodeDisplay = new System.Windows.Forms.Label();
             this.WindowBlueMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
             this.WindowGreenMaterialSlider = new MaterialSkin.Controls.MaterialSlider();
@@ -118,6 +132,7 @@ namespace CIS_129_Final
             this.SettingsButtonAppartmentsPage = new System.Windows.Forms.Button();
             this.SettingsButtonHomePage = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).BeginInit();
             this.ReportPage.SuspendLayout();
@@ -167,6 +182,7 @@ namespace CIS_129_Final
             // ReportViewer
             // 
             this.ReportViewer.BackColor = System.Drawing.Color.Silver;
+            this.ReportViewer.ForeColor = System.Drawing.Color.Black;
             this.ReportViewer.LocalReport.ReportEmbeddedResource = "CIS_129_Final.FullReport.rdlc";
             this.ReportViewer.Location = new System.Drawing.Point(159, 160);
             this.ReportViewer.Name = "ReportViewer";
@@ -227,7 +243,6 @@ namespace CIS_129_Final
             // 
             // ReportButtonReportPage
             // 
-            this.ReportButtonReportPage.BackgroundImage = global::CIS_129_Final.Properties.Resources.Report_Icon;
             this.ReportButtonReportPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ReportButtonReportPage.Location = new System.Drawing.Point(5, 481);
             this.ReportButtonReportPage.Name = "ReportButtonReportPage";
@@ -238,7 +253,6 @@ namespace CIS_129_Final
             // 
             // ReportButtonHousesPage
             // 
-            this.ReportButtonHousesPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_House;
             this.ReportButtonHousesPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ReportButtonHousesPage.Location = new System.Drawing.Point(5, 327);
             this.ReportButtonHousesPage.Name = "ReportButtonHousesPage";
@@ -249,7 +263,6 @@ namespace CIS_129_Final
             // 
             // ReportButtonAppartmentsPage
             // 
-            this.ReportButtonAppartmentsPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Appartment;
             this.ReportButtonAppartmentsPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ReportButtonAppartmentsPage.Location = new System.Drawing.Point(5, 164);
             this.ReportButtonAppartmentsPage.Name = "ReportButtonAppartmentsPage";
@@ -260,7 +273,6 @@ namespace CIS_129_Final
             // 
             // ReportButtonHomePage
             // 
-            this.ReportButtonHomePage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Home;
             this.ReportButtonHomePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ReportButtonHomePage.Location = new System.Drawing.Point(5, 10);
             this.ReportButtonHomePage.Name = "ReportButtonHomePage";
@@ -342,7 +354,6 @@ namespace CIS_129_Final
             // 
             // HousesButtonsReportPage
             // 
-            this.HousesButtonsReportPage.BackgroundImage = global::CIS_129_Final.Properties.Resources.Report_Icon;
             this.HousesButtonsReportPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HousesButtonsReportPage.Location = new System.Drawing.Point(5, 481);
             this.HousesButtonsReportPage.Name = "HousesButtonsReportPage";
@@ -354,7 +365,6 @@ namespace CIS_129_Final
             // HousesButtonsHousesPage
             // 
             this.HousesButtonsHousesPage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HousesButtonsHousesPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_House;
             this.HousesButtonsHousesPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HousesButtonsHousesPage.Location = new System.Drawing.Point(5, 327);
             this.HousesButtonsHousesPage.Name = "HousesButtonsHousesPage";
@@ -366,7 +376,6 @@ namespace CIS_129_Final
             // HousesButtonsAppartmentsPage
             // 
             this.HousesButtonsAppartmentsPage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HousesButtonsAppartmentsPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Appartment;
             this.HousesButtonsAppartmentsPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HousesButtonsAppartmentsPage.Location = new System.Drawing.Point(5, 164);
             this.HousesButtonsAppartmentsPage.Name = "HousesButtonsAppartmentsPage";
@@ -378,7 +387,6 @@ namespace CIS_129_Final
             // HousesButtonsHomePage
             // 
             this.HousesButtonsHomePage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HousesButtonsHomePage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Home;
             this.HousesButtonsHomePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HousesButtonsHomePage.Location = new System.Drawing.Point(5, 10);
             this.HousesButtonsHomePage.Name = "HousesButtonsHomePage";
@@ -522,7 +530,6 @@ namespace CIS_129_Final
             // AppartmentsButtonsReportPage
             // 
             this.AppartmentsButtonsReportPage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsButtonsReportPage.BackgroundImage = global::CIS_129_Final.Properties.Resources.Report_Icon;
             this.AppartmentsButtonsReportPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AppartmentsButtonsReportPage.Location = new System.Drawing.Point(5, 481);
             this.AppartmentsButtonsReportPage.Name = "AppartmentsButtonsReportPage";
@@ -534,7 +541,6 @@ namespace CIS_129_Final
             // AppartmentsButtonsHousesPage
             // 
             this.AppartmentsButtonsHousesPage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsButtonsHousesPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_House;
             this.AppartmentsButtonsHousesPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AppartmentsButtonsHousesPage.Location = new System.Drawing.Point(5, 327);
             this.AppartmentsButtonsHousesPage.Name = "AppartmentsButtonsHousesPage";
@@ -546,7 +552,6 @@ namespace CIS_129_Final
             // AppartmentsButtonsAppartmentsPage
             // 
             this.AppartmentsButtonsAppartmentsPage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsButtonsAppartmentsPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Appartment;
             this.AppartmentsButtonsAppartmentsPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AppartmentsButtonsAppartmentsPage.Location = new System.Drawing.Point(5, 164);
             this.AppartmentsButtonsAppartmentsPage.Name = "AppartmentsButtonsAppartmentsPage";
@@ -558,7 +563,6 @@ namespace CIS_129_Final
             // AppartmentsButtonsHomePage
             // 
             this.AppartmentsButtonsHomePage.BackColor = System.Drawing.Color.RoyalBlue;
-            this.AppartmentsButtonsHomePage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Home;
             this.AppartmentsButtonsHomePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AppartmentsButtonsHomePage.Location = new System.Drawing.Point(5, 10);
             this.AppartmentsButtonsHomePage.Name = "AppartmentsButtonsHomePage";
@@ -744,7 +748,6 @@ namespace CIS_129_Final
             // HomePageButtonReport
             // 
             this.HomePageButtonReport.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HomePageButtonReport.BackgroundImage = global::CIS_129_Final.Properties.Resources.Report_Icon;
             this.HomePageButtonReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomePageButtonReport.Location = new System.Drawing.Point(5, 481);
             this.HomePageButtonReport.Name = "HomePageButtonReport";
@@ -756,7 +759,6 @@ namespace CIS_129_Final
             // HomePageButtonHouses
             // 
             this.HomePageButtonHouses.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HomePageButtonHouses.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_House;
             this.HomePageButtonHouses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomePageButtonHouses.Location = new System.Drawing.Point(5, 327);
             this.HomePageButtonHouses.Name = "HomePageButtonHouses";
@@ -768,7 +770,6 @@ namespace CIS_129_Final
             // HomePageButtonAppartments
             // 
             this.HomePageButtonAppartments.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HomePageButtonAppartments.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Appartment;
             this.HomePageButtonAppartments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomePageButtonAppartments.Location = new System.Drawing.Point(5, 164);
             this.HomePageButtonAppartments.Name = "HomePageButtonAppartments";
@@ -780,7 +781,6 @@ namespace CIS_129_Final
             // HomePageButtonHome
             // 
             this.HomePageButtonHome.BackColor = System.Drawing.Color.RoyalBlue;
-            this.HomePageButtonHome.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Home;
             this.HomePageButtonHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.HomePageButtonHome.Location = new System.Drawing.Point(5, 10);
             this.HomePageButtonHome.Name = "HomePageButtonHome";
@@ -821,15 +821,29 @@ namespace CIS_129_Final
             // 
             // SettingsPanel
             // 
-            this.SettingsPanel.Controls.Add(this.MenueColorInfoLabel);
+            this.SettingsPanel.Controls.Add(this.ConfermTheamButton);
+            this.SettingsPanel.Controls.Add(this.MenueTextColorCodeDisplay);
+            this.SettingsPanel.Controls.Add(this.WindowTextColorCodeDisplay);
             this.SettingsPanel.Controls.Add(this.MenueColorConfermButton);
+            this.SettingsPanel.Controls.Add(this.WindowColorConfermButton);
+            this.SettingsPanel.Controls.Add(this.MenueTextColorInfoLabel);
+            this.SettingsPanel.Controls.Add(this.WindowTextColorInfoLabel);
+            this.SettingsPanel.Controls.Add(this.MenueTextColorPreviewPanel);
+            this.SettingsPanel.Controls.Add(this.MenueTextBlueMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.WindowTextColorPreviewPanel);
+            this.SettingsPanel.Controls.Add(this.MenueTextGreenMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.WindowTextBlueMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.MenueTextRedMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.WindowTextGreenMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.WindowTextRedMaterialSlider);
+            this.SettingsPanel.Controls.Add(this.ColorTheamComboBox);
+            this.SettingsPanel.Controls.Add(this.MenueColorInfoLabel);
             this.SettingsPanel.Controls.Add(this.MenueColorCodeDisplay);
             this.SettingsPanel.Controls.Add(this.MenueBlueMaterialSlider);
             this.SettingsPanel.Controls.Add(this.MenueGreenMaterialSlider);
             this.SettingsPanel.Controls.Add(this.MenueRedMaterialSlider);
             this.SettingsPanel.Controls.Add(this.MenueColorPreviewPanel);
             this.SettingsPanel.Controls.Add(this.WindowColorInfoLabel);
-            this.SettingsPanel.Controls.Add(this.WindowColorConfermButton);
             this.SettingsPanel.Controls.Add(this.WindowColorCodeDisplay);
             this.SettingsPanel.Controls.Add(this.WindowBlueMaterialSlider);
             this.SettingsPanel.Controls.Add(this.WindowGreenMaterialSlider);
@@ -840,33 +854,215 @@ namespace CIS_129_Final
             this.SettingsPanel.Size = new System.Drawing.Size(1073, 471);
             this.SettingsPanel.TabIndex = 4;
             // 
-            // MenueColorInfoLabel
+            // ConfermTheamButton
             // 
-            this.MenueColorInfoLabel.AutoSize = true;
-            this.MenueColorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenueColorInfoLabel.Location = new System.Drawing.Point(486, 5);
-            this.MenueColorInfoLabel.Name = "MenueColorInfoLabel";
-            this.MenueColorInfoLabel.Size = new System.Drawing.Size(427, 31);
-            this.MenueColorInfoLabel.TabIndex = 15;
-            this.MenueColorInfoLabel.Text = "Menue Background Color Selector";
+            this.ConfermTheamButton.BackColor = System.Drawing.Color.Transparent;
+            this.ConfermTheamButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfermTheamButton.Location = new System.Drawing.Point(3, 62);
+            this.ConfermTheamButton.Name = "ConfermTheamButton";
+            this.ConfermTheamButton.Size = new System.Drawing.Size(187, 74);
+            this.ConfermTheamButton.TabIndex = 28;
+            this.ConfermTheamButton.Text = "Conferm Theam";
+            this.ConfermTheamButton.UseVisualStyleBackColor = false;
+            this.ConfermTheamButton.Click += new System.EventHandler(this.ConfermTheamButton_Click);
+            // 
+            // MenueTextColorCodeDisplay
+            // 
+            this.MenueTextColorCodeDisplay.AutoSize = true;
+            this.MenueTextColorCodeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenueTextColorCodeDisplay.Location = new System.Drawing.Point(797, 240);
+            this.MenueTextColorCodeDisplay.Name = "MenueTextColorCodeDisplay";
+            this.MenueTextColorCodeDisplay.Size = new System.Drawing.Size(177, 31);
+            this.MenueTextColorCodeDisplay.TabIndex = 27;
+            this.MenueTextColorCodeDisplay.Text = "rgb{50,50,50}";
+            // 
+            // WindowTextColorCodeDisplay
+            // 
+            this.WindowTextColorCodeDisplay.AutoSize = true;
+            this.WindowTextColorCodeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WindowTextColorCodeDisplay.Location = new System.Drawing.Point(350, 240);
+            this.WindowTextColorCodeDisplay.Name = "WindowTextColorCodeDisplay";
+            this.WindowTextColorCodeDisplay.Size = new System.Drawing.Size(177, 31);
+            this.WindowTextColorCodeDisplay.TabIndex = 26;
+            this.WindowTextColorCodeDisplay.Text = "rgb{50,50,50}";
             // 
             // MenueColorConfermButton
             // 
             this.MenueColorConfermButton.BackColor = System.Drawing.Color.Transparent;
             this.MenueColorConfermButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenueColorConfermButton.Location = new System.Drawing.Point(492, 205);
+            this.MenueColorConfermButton.Location = new System.Drawing.Point(649, 388);
             this.MenueColorConfermButton.Name = "MenueColorConfermButton";
-            this.MenueColorConfermButton.Size = new System.Drawing.Size(398, 90);
+            this.MenueColorConfermButton.Size = new System.Drawing.Size(404, 74);
             this.MenueColorConfermButton.TabIndex = 14;
             this.MenueColorConfermButton.Text = "Conferm Selection";
             this.MenueColorConfermButton.UseVisualStyleBackColor = false;
             this.MenueColorConfermButton.Click += new System.EventHandler(this.MenueColorConfermButton_Click);
             // 
+            // WindowColorConfermButton
+            // 
+            this.WindowColorConfermButton.BackColor = System.Drawing.Color.Transparent;
+            this.WindowColorConfermButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WindowColorConfermButton.Location = new System.Drawing.Point(202, 387);
+            this.WindowColorConfermButton.Name = "WindowColorConfermButton";
+            this.WindowColorConfermButton.Size = new System.Drawing.Size(404, 74);
+            this.WindowColorConfermButton.TabIndex = 7;
+            this.WindowColorConfermButton.Text = "Conferm Selection";
+            this.WindowColorConfermButton.UseVisualStyleBackColor = false;
+            this.WindowColorConfermButton.Click += new System.EventHandler(this.ColorConfermButton_Click);
+            // 
+            // MenueTextColorInfoLabel
+            // 
+            this.MenueTextColorInfoLabel.AutoSize = true;
+            this.MenueTextColorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenueTextColorInfoLabel.Location = new System.Drawing.Point(643, 205);
+            this.MenueTextColorInfoLabel.Name = "MenueTextColorInfoLabel";
+            this.MenueTextColorInfoLabel.Size = new System.Drawing.Size(342, 31);
+            this.MenueTextColorInfoLabel.TabIndex = 25;
+            this.MenueTextColorInfoLabel.Text = "Menue Text Color  Selector";
+            // 
+            // WindowTextColorInfoLabel
+            // 
+            this.WindowTextColorInfoLabel.AutoSize = true;
+            this.WindowTextColorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WindowTextColorInfoLabel.Location = new System.Drawing.Point(196, 205);
+            this.WindowTextColorInfoLabel.Name = "WindowTextColorInfoLabel";
+            this.WindowTextColorInfoLabel.Size = new System.Drawing.Size(356, 31);
+            this.WindowTextColorInfoLabel.TabIndex = 20;
+            this.WindowTextColorInfoLabel.Text = "Window Text Color  Selector";
+            // 
+            // MenueTextColorPreviewPanel
+            // 
+            this.MenueTextColorPreviewPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MenueTextColorPreviewPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.MenueTextColorPreviewPanel.Location = new System.Drawing.Point(649, 240);
+            this.MenueTextColorPreviewPanel.Name = "MenueTextColorPreviewPanel";
+            this.MenueTextColorPreviewPanel.Size = new System.Drawing.Size(142, 142);
+            this.MenueTextColorPreviewPanel.TabIndex = 21;
+            // 
+            // MenueTextBlueMaterialSlider
+            // 
+            this.MenueTextBlueMaterialSlider.Depth = 0;
+            this.MenueTextBlueMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueTextBlueMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.MenueTextBlueMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MenueTextBlueMaterialSlider.Location = new System.Drawing.Point(803, 341);
+            this.MenueTextBlueMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MenueTextBlueMaterialSlider.Name = "MenueTextBlueMaterialSlider";
+            this.MenueTextBlueMaterialSlider.RangeMax = 255;
+            this.MenueTextBlueMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.MenueTextBlueMaterialSlider.TabIndex = 24;
+            this.MenueTextBlueMaterialSlider.Text = "B";
+            this.MenueTextBlueMaterialSlider.Value = 0;
+            // 
+            // WindowTextColorPreviewPanel
+            // 
+            this.WindowTextColorPreviewPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.WindowTextColorPreviewPanel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.WindowTextColorPreviewPanel.Location = new System.Drawing.Point(202, 239);
+            this.WindowTextColorPreviewPanel.Name = "WindowTextColorPreviewPanel";
+            this.WindowTextColorPreviewPanel.Size = new System.Drawing.Size(142, 142);
+            this.WindowTextColorPreviewPanel.TabIndex = 3;
+            // 
+            // MenueTextGreenMaterialSlider
+            // 
+            this.MenueTextGreenMaterialSlider.Depth = 0;
+            this.MenueTextGreenMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueTextGreenMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.MenueTextGreenMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MenueTextGreenMaterialSlider.Location = new System.Drawing.Point(803, 309);
+            this.MenueTextGreenMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MenueTextGreenMaterialSlider.Name = "MenueTextGreenMaterialSlider";
+            this.MenueTextGreenMaterialSlider.RangeMax = 255;
+            this.MenueTextGreenMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.MenueTextGreenMaterialSlider.TabIndex = 23;
+            this.MenueTextGreenMaterialSlider.Text = "G";
+            this.MenueTextGreenMaterialSlider.Value = 0;
+            // 
+            // WindowTextBlueMaterialSlider
+            // 
+            this.WindowTextBlueMaterialSlider.Depth = 0;
+            this.WindowTextBlueMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowTextBlueMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.WindowTextBlueMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.WindowTextBlueMaterialSlider.Location = new System.Drawing.Point(356, 342);
+            this.WindowTextBlueMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.WindowTextBlueMaterialSlider.Name = "WindowTextBlueMaterialSlider";
+            this.WindowTextBlueMaterialSlider.RangeMax = 255;
+            this.WindowTextBlueMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.WindowTextBlueMaterialSlider.TabIndex = 19;
+            this.WindowTextBlueMaterialSlider.Text = "B";
+            this.WindowTextBlueMaterialSlider.Value = 0;
+            // 
+            // MenueTextRedMaterialSlider
+            // 
+            this.MenueTextRedMaterialSlider.Depth = 0;
+            this.MenueTextRedMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueTextRedMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.MenueTextRedMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.MenueTextRedMaterialSlider.Location = new System.Drawing.Point(803, 273);
+            this.MenueTextRedMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.MenueTextRedMaterialSlider.Name = "MenueTextRedMaterialSlider";
+            this.MenueTextRedMaterialSlider.RangeMax = 255;
+            this.MenueTextRedMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.MenueTextRedMaterialSlider.TabIndex = 22;
+            this.MenueTextRedMaterialSlider.Text = "R";
+            this.MenueTextRedMaterialSlider.Value = 0;
+            // 
+            // WindowTextGreenMaterialSlider
+            // 
+            this.WindowTextGreenMaterialSlider.Depth = 0;
+            this.WindowTextGreenMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowTextGreenMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.WindowTextGreenMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.WindowTextGreenMaterialSlider.Location = new System.Drawing.Point(356, 309);
+            this.WindowTextGreenMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.WindowTextGreenMaterialSlider.Name = "WindowTextGreenMaterialSlider";
+            this.WindowTextGreenMaterialSlider.RangeMax = 255;
+            this.WindowTextGreenMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.WindowTextGreenMaterialSlider.TabIndex = 18;
+            this.WindowTextGreenMaterialSlider.Text = "G";
+            this.WindowTextGreenMaterialSlider.Value = 0;
+            // 
+            // WindowTextRedMaterialSlider
+            // 
+            this.WindowTextRedMaterialSlider.Depth = 0;
+            this.WindowTextRedMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowTextRedMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.WindowTextRedMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.WindowTextRedMaterialSlider.Location = new System.Drawing.Point(356, 273);
+            this.WindowTextRedMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
+            this.WindowTextRedMaterialSlider.Name = "WindowTextRedMaterialSlider";
+            this.WindowTextRedMaterialSlider.RangeMax = 255;
+            this.WindowTextRedMaterialSlider.Size = new System.Drawing.Size(250, 40);
+            this.WindowTextRedMaterialSlider.TabIndex = 17;
+            this.WindowTextRedMaterialSlider.Text = "R";
+            this.WindowTextRedMaterialSlider.Value = 0;
+            // 
+            // ColorTheamComboBox
+            // 
+            this.ColorTheamComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColorTheamComboBox.FormattingEnabled = true;
+            this.ColorTheamComboBox.Location = new System.Drawing.Point(3, 17);
+            this.ColorTheamComboBox.Name = "ColorTheamComboBox";
+            this.ColorTheamComboBox.Size = new System.Drawing.Size(187, 39);
+            this.ColorTheamComboBox.TabIndex = 16;
+            this.ColorTheamComboBox.SelectedIndexChanged += new System.EventHandler(this.ColorModeComboBox_SelectedIndexChanged);
+            // 
+            // MenueColorInfoLabel
+            // 
+            this.MenueColorInfoLabel.AutoSize = true;
+            this.MenueColorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenueColorInfoLabel.Location = new System.Drawing.Point(643, 5);
+            this.MenueColorInfoLabel.Name = "MenueColorInfoLabel";
+            this.MenueColorInfoLabel.Size = new System.Drawing.Size(427, 31);
+            this.MenueColorInfoLabel.TabIndex = 15;
+            this.MenueColorInfoLabel.Text = "Menue Background Color Selector";
+            // 
             // MenueColorCodeDisplay
             // 
             this.MenueColorCodeDisplay.AutoSize = true;
             this.MenueColorCodeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenueColorCodeDisplay.Location = new System.Drawing.Point(640, 57);
+            this.MenueColorCodeDisplay.Location = new System.Drawing.Point(797, 57);
             this.MenueColorCodeDisplay.Name = "MenueColorCodeDisplay";
             this.MenueColorCodeDisplay.Size = new System.Drawing.Size(177, 31);
             this.MenueColorCodeDisplay.TabIndex = 13;
@@ -875,44 +1071,53 @@ namespace CIS_129_Final
             // MenueBlueMaterialSlider
             // 
             this.MenueBlueMaterialSlider.Depth = 0;
+            this.MenueBlueMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueBlueMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.MenueBlueMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MenueBlueMaterialSlider.Location = new System.Drawing.Point(640, 159);
+            this.MenueBlueMaterialSlider.Location = new System.Drawing.Point(797, 159);
             this.MenueBlueMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.MenueBlueMaterialSlider.Name = "MenueBlueMaterialSlider";
             this.MenueBlueMaterialSlider.RangeMax = 255;
             this.MenueBlueMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.MenueBlueMaterialSlider.TabIndex = 12;
             this.MenueBlueMaterialSlider.Text = "B";
+            this.MenueBlueMaterialSlider.Value = 0;
             // 
             // MenueGreenMaterialSlider
             // 
             this.MenueGreenMaterialSlider.Depth = 0;
+            this.MenueGreenMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueGreenMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.MenueGreenMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MenueGreenMaterialSlider.Location = new System.Drawing.Point(640, 127);
+            this.MenueGreenMaterialSlider.Location = new System.Drawing.Point(797, 127);
             this.MenueGreenMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.MenueGreenMaterialSlider.Name = "MenueGreenMaterialSlider";
             this.MenueGreenMaterialSlider.RangeMax = 255;
             this.MenueGreenMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.MenueGreenMaterialSlider.TabIndex = 11;
             this.MenueGreenMaterialSlider.Text = "G";
+            this.MenueGreenMaterialSlider.Value = 0;
             // 
             // MenueRedMaterialSlider
             // 
             this.MenueRedMaterialSlider.Depth = 0;
+            this.MenueRedMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.MenueRedMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.MenueRedMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.MenueRedMaterialSlider.Location = new System.Drawing.Point(640, 91);
+            this.MenueRedMaterialSlider.Location = new System.Drawing.Point(797, 91);
             this.MenueRedMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.MenueRedMaterialSlider.Name = "MenueRedMaterialSlider";
             this.MenueRedMaterialSlider.RangeMax = 255;
             this.MenueRedMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.MenueRedMaterialSlider.TabIndex = 10;
             this.MenueRedMaterialSlider.Text = "R";
+            this.MenueRedMaterialSlider.Value = 0;
             // 
             // MenueColorPreviewPanel
             // 
             this.MenueColorPreviewPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MenueColorPreviewPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.MenueColorPreviewPanel.Location = new System.Drawing.Point(492, 57);
+            this.MenueColorPreviewPanel.Location = new System.Drawing.Point(649, 57);
             this.MenueColorPreviewPanel.Name = "MenueColorPreviewPanel";
             this.MenueColorPreviewPanel.Size = new System.Drawing.Size(142, 142);
             this.MenueColorPreviewPanel.TabIndex = 9;
@@ -921,29 +1126,17 @@ namespace CIS_129_Final
             // 
             this.WindowColorInfoLabel.AutoSize = true;
             this.WindowColorInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WindowColorInfoLabel.Location = new System.Drawing.Point(15, 5);
+            this.WindowColorInfoLabel.Location = new System.Drawing.Point(196, 5);
             this.WindowColorInfoLabel.Name = "WindowColorInfoLabel";
             this.WindowColorInfoLabel.Size = new System.Drawing.Size(441, 31);
             this.WindowColorInfoLabel.TabIndex = 8;
             this.WindowColorInfoLabel.Text = "Window Background Color Selector";
             // 
-            // WindowColorConfermButton
-            // 
-            this.WindowColorConfermButton.BackColor = System.Drawing.Color.Transparent;
-            this.WindowColorConfermButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WindowColorConfermButton.Location = new System.Drawing.Point(21, 205);
-            this.WindowColorConfermButton.Name = "WindowColorConfermButton";
-            this.WindowColorConfermButton.Size = new System.Drawing.Size(398, 90);
-            this.WindowColorConfermButton.TabIndex = 7;
-            this.WindowColorConfermButton.Text = "Conferm Selection";
-            this.WindowColorConfermButton.UseVisualStyleBackColor = false;
-            this.WindowColorConfermButton.Click += new System.EventHandler(this.ColorConfermButton_Click);
-            // 
             // WindowColorCodeDisplay
             // 
             this.WindowColorCodeDisplay.AutoSize = true;
             this.WindowColorCodeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WindowColorCodeDisplay.Location = new System.Drawing.Point(169, 57);
+            this.WindowColorCodeDisplay.Location = new System.Drawing.Point(350, 57);
             this.WindowColorCodeDisplay.Name = "WindowColorCodeDisplay";
             this.WindowColorCodeDisplay.Size = new System.Drawing.Size(177, 31);
             this.WindowColorCodeDisplay.TabIndex = 6;
@@ -952,44 +1145,53 @@ namespace CIS_129_Final
             // WindowBlueMaterialSlider
             // 
             this.WindowBlueMaterialSlider.Depth = 0;
+            this.WindowBlueMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowBlueMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.WindowBlueMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.WindowBlueMaterialSlider.Location = new System.Drawing.Point(169, 159);
+            this.WindowBlueMaterialSlider.Location = new System.Drawing.Point(350, 159);
             this.WindowBlueMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.WindowBlueMaterialSlider.Name = "WindowBlueMaterialSlider";
             this.WindowBlueMaterialSlider.RangeMax = 255;
             this.WindowBlueMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.WindowBlueMaterialSlider.TabIndex = 5;
             this.WindowBlueMaterialSlider.Text = "B";
+            this.WindowBlueMaterialSlider.Value = 0;
             // 
             // WindowGreenMaterialSlider
             // 
             this.WindowGreenMaterialSlider.Depth = 0;
+            this.WindowGreenMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowGreenMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.WindowGreenMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.WindowGreenMaterialSlider.Location = new System.Drawing.Point(169, 127);
+            this.WindowGreenMaterialSlider.Location = new System.Drawing.Point(350, 127);
             this.WindowGreenMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.WindowGreenMaterialSlider.Name = "WindowGreenMaterialSlider";
             this.WindowGreenMaterialSlider.RangeMax = 255;
             this.WindowGreenMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.WindowGreenMaterialSlider.TabIndex = 4;
             this.WindowGreenMaterialSlider.Text = "G";
+            this.WindowGreenMaterialSlider.Value = 0;
             // 
             // WindowRedMaterialSlider
             // 
             this.WindowRedMaterialSlider.Depth = 0;
+            this.WindowRedMaterialSlider.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.WindowRedMaterialSlider.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
             this.WindowRedMaterialSlider.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.WindowRedMaterialSlider.Location = new System.Drawing.Point(169, 91);
+            this.WindowRedMaterialSlider.Location = new System.Drawing.Point(350, 91);
             this.WindowRedMaterialSlider.MouseState = MaterialSkin.MouseState.HOVER;
             this.WindowRedMaterialSlider.Name = "WindowRedMaterialSlider";
             this.WindowRedMaterialSlider.RangeMax = 255;
             this.WindowRedMaterialSlider.Size = new System.Drawing.Size(250, 40);
             this.WindowRedMaterialSlider.TabIndex = 3;
             this.WindowRedMaterialSlider.Text = "R";
+            this.WindowRedMaterialSlider.Value = 0;
             // 
             // WindowColorPreviewPanel
             // 
             this.WindowColorPreviewPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.WindowColorPreviewPanel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.WindowColorPreviewPanel.Location = new System.Drawing.Point(21, 57);
+            this.WindowColorPreviewPanel.Location = new System.Drawing.Point(202, 57);
             this.WindowColorPreviewPanel.Name = "WindowColorPreviewPanel";
             this.WindowColorPreviewPanel.Size = new System.Drawing.Size(142, 142);
             this.WindowColorPreviewPanel.TabIndex = 2;
@@ -1035,7 +1237,6 @@ namespace CIS_129_Final
             // 
             // SettingsButtonReportPage
             // 
-            this.SettingsButtonReportPage.BackgroundImage = global::CIS_129_Final.Properties.Resources.Report_Icon;
             this.SettingsButtonReportPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButtonReportPage.Location = new System.Drawing.Point(5, 481);
             this.SettingsButtonReportPage.Name = "SettingsButtonReportPage";
@@ -1046,7 +1247,6 @@ namespace CIS_129_Final
             // 
             // SettingsButtonHousesPage
             // 
-            this.SettingsButtonHousesPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_House;
             this.SettingsButtonHousesPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButtonHousesPage.Location = new System.Drawing.Point(5, 327);
             this.SettingsButtonHousesPage.Name = "SettingsButtonHousesPage";
@@ -1057,7 +1257,6 @@ namespace CIS_129_Final
             // 
             // SettingsButtonAppartmentsPage
             // 
-            this.SettingsButtonAppartmentsPage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Appartment;
             this.SettingsButtonAppartmentsPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButtonAppartmentsPage.Location = new System.Drawing.Point(5, 164);
             this.SettingsButtonAppartmentsPage.Name = "SettingsButtonAppartmentsPage";
@@ -1069,7 +1268,6 @@ namespace CIS_129_Final
             // 
             // SettingsButtonHomePage
             // 
-            this.SettingsButtonHomePage.BackgroundImage = global::CIS_129_Final.Properties.Resources._300X_Home;
             this.SettingsButtonHomePage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SettingsButtonHomePage.Location = new System.Drawing.Point(5, 10);
             this.SettingsButtonHomePage.Name = "SettingsButtonHomePage";
@@ -1084,6 +1282,12 @@ namespace CIS_129_Final
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1093,6 +1297,7 @@ namespace CIS_129_Final
             this.Controls.Add(this.MainWindowMaterialTabControler);
             this.Name = "MainWindow";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.appartmentDatabaseDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet)).EndInit();
             this.ReportPage.ResumeLayout(false);
@@ -1213,9 +1418,26 @@ namespace CIS_129_Final
         private MaterialSkin.Controls.MaterialSlider MenueRedMaterialSlider;
         private Panel MenueColorPreviewPanel;
         private Label WindowColorInfoLabel;
+        private ComboBox ColorTheamComboBox;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private Label MenueTextColorInfoLabel;
+        private Label WindowTextColorInfoLabel;
+        private Panel MenueTextColorPreviewPanel;
+        private MaterialSkin.Controls.MaterialSlider MenueTextBlueMaterialSlider;
+        private Panel WindowTextColorPreviewPanel;
+        private MaterialSkin.Controls.MaterialSlider MenueTextGreenMaterialSlider;
+        private MaterialSkin.Controls.MaterialSlider WindowTextBlueMaterialSlider;
+        private MaterialSkin.Controls.MaterialSlider MenueTextRedMaterialSlider;
+        private MaterialSkin.Controls.MaterialSlider WindowTextGreenMaterialSlider;
+        private MaterialSkin.Controls.MaterialSlider WindowTextRedMaterialSlider;
+        private Label MenueTextColorCodeDisplay;
+        private Label WindowTextColorCodeDisplay;
+        private Button ConfermTheamButton;
 
         //Button
         /*
+        
+        Icon
         SettingsButtonReportPage;
         SettingsButtonHousesPage;
         SettingsButtonAppartmentsPage;
