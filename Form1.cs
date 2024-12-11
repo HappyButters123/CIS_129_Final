@@ -28,11 +28,10 @@ namespace CIS_129_Final
     {
         public MainWindow()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-
             InitializeComponent();
             InitializeCharts();
             InitializeColorChoices();
+            ButtonIconsFix();
         }
 
         private void ButtonIconsFix()
